@@ -1,16 +1,24 @@
-@font-face {
-    font-family: GothamRounded; /* Имя шрифта */
-    src: url(../font/GothamRoundedLight_21020.ttf); /* Путь к файлу со шрифтом */
-   }
+// out: null
 
-@font-face {
-    font-family: Open Sans; /* Имя шрифта */
-    src: url(../font/open-sans.ttf); /* Путь к файлу со шрифтом */
-   }
 
 //общие переменные
-@font-color: #fff;
+@color-base: #fff;
+@color-menu-hvr: #d22856;
+@color-menu-down: rgba(210, 40, 86, 0.5);
+
+
+@font-color: @color-base;
+@font-base: 14px;
+@font-menu: @font-base + 4;
+@font-family-base: "'Open Sans', arial";
+
+@mobile__max-width: 320px;
 
 // переменные для блока header
-@font-family--header: 'GothamRounded';
 @background-url--header: '../img/header_background.png';
+@background-color--header-logo: rgba(27, 37, 48, 0.5);
+
+@height--menu-nav: 63px;
+@top-position--menu-nav: @height--menu-nav + 2;
+@color--menu-open: #283645;
+@shadown-color--menu-open: #475360;

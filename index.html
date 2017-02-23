@@ -3,28 +3,39 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=320">
   <title>PINK</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <header class="page-header">
     <div class="page-header__inner">
+      <div class="page-header__nav-wrap js-page-header__nav-wrap">
 
-      <div class="page-header__nav-wrap">
         <div class="page-header__logo">
           <a href="" class="page-header__logo-link">
+            <svg class="page-header__logo-text">
+              <use xlink:href="#text-PINK">
+            </svg>
             PINK
           </a>
         </div>
 
-        <nav class="main-nav">
-          <button class="main-nav__menu-btn"><span>toggle menu</span></button>
-          <ul class="main-nav__items main-nav__items--hide">
-            <li class="main-nav__item"><a href="">Информация</a></li>
-            <li class="main-nav__item"><a href="">Возможности</a></li>
-            <li class="main-nav__item"><a href="">Отзывы</a></li>
-            <li class="main-nav__item"><a href="">Стоимость</a></li>
+        <button class="menu-toggle-btn js-toggle-btn">
+          <svg class="menu-toggle-btn__icon js-toggle-btn__icon">
+            <use xlink:href="#menu-burger">
+          </svg>
+          toggle menu
+        </button>
+
+        <nav class="main-nav js-main-nav main-nav--hide">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Информация</a></li>
+            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Возможности</a></li>
+            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Отзывы</a></li>
+            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Стоимость</a></li>
           </ul>
         </nav>
       </div>
@@ -170,14 +181,14 @@
 
     </div>
   </section>
-  
+
   <section class="contacts">
     <div class="contacts__inner">
       <h3 class="contacts__header">
         <p>Остались вопросы?</p>
         <p>Свяжитесь с нами!</p>
       </h3>
-      
+
       <ul class="contacts__items">
         <li class="contacts__telephone">
           <h3>Звоните:</h3>
@@ -189,17 +200,41 @@
         </li>
         <li class="contacts__address">
           <h3>Приезжайте в гости:</h3>
-          <div class="contacts__address-post">Санкт-Петербург,<br> 
-Невский проспект, д. 20</div>
+          <div class="contacts__address-post">Санкт-Петербург,
+            <br> Невский проспект, д. 20</div>
         </li>
       </ul>
-      
+
       <div class="contacts__geolocation">
-        
+
       </div>
     </div>
   </section>
 
+  <!-- определение svg иконок -->
+
+  <svg width="0" height="0">
+    <defs>
+      <path id="text-PINK" d="M0,1.46A1.3,1.3,0,0,1,1.27.16H8.51C13.64.16,17,2.89,17,7.37v.06c0,4.9-4.09,7.43-8.93,7.43H2.56v6.88A1.3,1.3,0,0,1,1.27,23,1.3,1.3,0,0,1,0,21.74ZM8.18,12.53c3.77,0,6.23-2,6.23-5V7.46c0-3.24-2.43-4.93-6.1-4.93H2.56v10Z M22.45,1.3A1.28,1.28,0,1,1,25,1.3V21.74a1.28,1.28,0,1,1-2.57,0Z
+M31.14,1.33A1.29,1.29,0,0,1,32.4.07h.36a1.57,1.57,0,0,1,1.3.75L47.86,18.4V1.27a1.25,1.25,0,1,1,2.5,0V21.78A1.15,1.15,0,0,1,49.19,23h-.13a1.76,1.76,0,0,1-1.33-.78l-14.09-18V21.78a1.25,1.25,0,1,1-2.5,0Z
+M56,1.3a1.28,1.28,0,1,1,2.57,0V13.73L71.56.45a1.46,1.46,0,0,1,1-.45A1.28,1.28,0,0,1,73.8,1.27a1.26,1.26,0,0,1-.42.91l-8.05,8L74,20.8a1.42,1.42,0,0,1,.36.94A1.32,1.32,0,0,1,73,23a1.23,1.23,0,0,1-1-.58L63.51,11.91l-4.9,4.9v4.93a1.28,1.28,0,1,1-2.57,0Z"
+      />
+
+      <path id="menu-burger" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671
+				c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98
+				c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z
+				 M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01
+				v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z" />
+
+      <path id="menu-cross" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.413,0.079,21.223,0,21.023,0
+	s-0.39,0.079-0.53,0.22l-8.56,8.56L3.373,0.22c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313c-0.293,0.293-0.293,0.768,0,1.061
+	l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22
+	c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094
+	c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z" />
+
+    </defs>
+  </svg>
+      <script src="js/script.js"></script>
 </body>
 
 </html>
