@@ -1,24 +1,44 @@
 // out: null
 
-
-//общие переменные
-@color-base: #fff;
-@color-menu-hvr: #d22856;
-@color-menu-down: rgba(210, 40, 86, 0.5);
-
-
-@font-color: @color-base;
-@font-base: 14px;
-@font-menu: @font-base + 4;
-@font-family-base: "'Open Sans', arial";
-
+//временная переменная для ограничения ширины под мобильную версию
 @mobile__max-width: 320px;
 
-// переменные для блока header
-@background-url--header: '../img/header_background.png';
-@background-color--header-logo: rgba(27, 37, 48, 0.5);
 
-@height--menu-nav: 63px;
-@top-position--menu-nav: @height--menu-nav + 2;
-@color--menu-open: #283645;
-@shadown-color--menu-open: #475360;
+//общие переменные
+@base-color: #fff;
+@hvr-color: #d22856;
+@active-opacity: 0.6;
+@font-color: @base-color;
+@font-size-base: 14px;
+@font-family-base: 'Open Sans', sans-serif;
+@font-size-h2: @font-size-base + 10;
+@font-size-h3: @font-size-base + 4;
+
+
+// переменные для блока header
+@header-background-url: '../img/header_background.png';
+@header-padding: 20px;
+@nav-background-color: rgba(27, 37, 48, 0.5);
+@nav-background-color--menu-open: @menu-color;
+
+@logotype-height: @font-size-h2;
+
+@menu-height-item: 62px;
+@menu-position-top: @logotype-height + @header-padding*2 + 1;
+@menu-color: #283645;
+@menu-border-top-color: #475360;
+@menu-shadow-color: #000;
+@menu-font-size: @font-size-base + 4;
+
+@product-presentation-img-heigth: 196px;
+@product-presentation-img-width: 111px;
+
+@load-btn-font-size: @font-size-h3;
+@load-btn-font-color: @base-color;
+@load-btn-padding: 13px;
+@load-btn-width: 281px;
+@load-btn-border-width: 4px;
+@load-btn-border-color: @base-color;
+@load-btn-border-radius: 2*@load-btn-padding + @load-btn-font-size;
+@load-btn-font-color--hvr: @hvr-color;
+@load-btn-font-color--active: fade(@load-btn-font-color--hvr, 60%);

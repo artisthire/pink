@@ -1,7 +1,7 @@
 // out: null
 .page-header {
   &__inner {
-    background: url(@background-url--header) 0 0 no-repeat;
+    background: url(@header-background-url) 0 0 no-repeat;
     max-width: @mobile__max-width;
     margin: 0 auto;
   }
@@ -9,36 +9,12 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 21px 20px;
-    background-color: @background-color--header-logo;
+    padding: @header-padding;
+    background-color: @nav-background-color;
+    margin-bottom: 25px;
     &--menu-open {
-      background-color: @color--menu-open;
-      box-shadow: 0px 1px 0px 0px @shadown-color--menu-open;
-      margin-bottom: 2px;
+      background-color: @nav-background-color--menu-open;
+      box-shadow: 0px 1px 0px 0px @menu-shadow-color;
     }
-  }
-  &__logo {
-    font-size: 0;
-  }
-  &__logo-link {
-    display: inline-block;
-    width: 74px;
-    height: 23px;
-    font-size: 0;
-    text-decoration: none;
-    line-height: 0;
-    cursor: pointer;
-    padding: 0;
-    overflow: hidden;
-    fill: @color-base;
-    
-     &:hover {
-        fill: @color-menu-hvr;
-      }
-      
-      &:active {
-        fill: @color-menu-down;
-      }
-    
   }
 }

@@ -1,0 +1,27 @@
+// out: null
+
+.product-presentation {
+  &__slogan {
+    color: @font-color;
+    font-size: @font-size-h2;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+  &__img {
+    position: relative;
+    overflow: hidden;
+    height: 297px;
+  }
+  &__img-container {
+    height: 313px;
+  }
+  &__img-product {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    margin-left: -@product-presentation-img-width/2;
+    width: @product-presentation-img-width;
+    height: @product-presentation-img-heigth;
+  }
+}

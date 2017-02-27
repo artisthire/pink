@@ -19,7 +19,5 @@ toggle_btn.onclick = function(e) {
      menu_wrap.classList.add("page-header__nav-wrap--menu-open");
      menu.classList.remove("main-nav--hide");
    }
-   
-   
 
  }

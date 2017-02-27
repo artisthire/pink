@@ -1,0 +1,27 @@
+// out: null
+
+.menu-toggle-btn {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  font-size: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 50px;
+  height: 24px;
+  &__icon {
+    fill: @base-color;
+
+    &:hover {
+      fill: @hvr-color;
+    }
+    &:active {
+      opacity: @active-opacity;
+    }
+  }
+  &--active {
+    width: 24px;
+  }
+}
