@@ -2,43 +2,60 @@
 
 //временная переменная для ограничения ширины под мобильную версию
 @mobile__max-width: 320px;
+@mobile__block-max-width: 280px;
 
 
 //общие переменные
-@base-color: #fff;
-@hvr-color: #d22856;
-@active-opacity: 0.6;
-@font-color: @base-color;
-@font-size-base: 14px;
+@gray: #bec2c7;
+@dark-gray: #283645;
+@light-gray: #f2f2f2;
+@base-color: #d22856;
+@base-color--fade: fade(@base-color, 60%);
+@gray-color--fade: fade(@gray,60%);
+
 @font-family-base: 'Open Sans', sans-serif;
+@font-size-base: 14px;
 @font-size-h2: @font-size-base + 10;
 @font-size-h3: @font-size-base + 4;
+@line-height: 1.375em;
 
 
 // переменные для блока header
-@header-background-url: '../img/header_background.png';
 @header-padding: 20px;
-@nav-background-color: rgba(27, 37, 48, 0.5);
-@nav-background-color--menu-open: @menu-color;
+@header-background-url: '../img/header_background.png';
+//@header-background-color: #1d2631;
+@header-font-color: #fff;
+
+@nav-background-color: fade(@dark-gray,60%);
+@nav-background-color--menu-open: @dark-gray;
 
 @logotype-height: @font-size-h2;
 
 @menu-height-item: 62px;
-@menu-position-top: @logotype-height + @header-padding*2 + 1;
-@menu-color: #283645;
-@menu-border-top-color: #475360;
+@menu-position-top: @logotype-height + @header-padding*2 + 2;
+@menu-color: @dark-gray;
+@menu-border-top-color: lighten(@dark-gray, 11.37);//#475360;
 @menu-shadow-color: #000;
 @menu-font-size: @font-size-base + 4;
 
-@product-presentation-img-heigth: 196px;
-@product-presentation-img-width: 111px;
+@product-presentation-img-heigth: 198px;
+@product-presentation-img-width: 112px;
 
 @load-btn-font-size: @font-size-h3;
-@load-btn-font-color: @base-color;
-@load-btn-padding: 13px;
-@load-btn-width: 281px;
+@load-btn-font-color: @header-font-color;
+@load-btn-padding-v: 15px;
+@load-btn-padding-h: 30px;
 @load-btn-border-width: 4px;
-@load-btn-border-color: @base-color;
-@load-btn-border-radius: 2*@load-btn-padding + @load-btn-font-size;
-@load-btn-font-color--hvr: @hvr-color;
-@load-btn-font-color--active: fade(@load-btn-font-color--hvr, 60%);
+@load-btn-border-color: @header-font-color;
+@load-btn-border-radius: 2*@load-btn-padding-v + @load-btn-font-size;
+@load-btn-font-color--hvr: @base-color;
+@load-btn-font-color--active: @base-color--fade;
+
+
+
+// переменны для блока promo
+@promo-slogan-background-color: #fff;
+@promo-before-element-height: 35px;
+@advantage-image-height: 320px;
+@advantage-image-width: 157px;
+@advantage-image-wrap-height: 280px;
