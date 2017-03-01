@@ -1,0 +1,31 @@
+// out: null
+
+.menu-toggle-btn {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+  .size(50px; 24px);
+  .clear-bottom-part-letter();
+
+  &__icon {
+    //заливка SVG
+    fill: @header-font-color;
+
+    &:hover {
+      fill: @base-color;
+    }
+    &:active {
+      fill: @base-color--fade;
+    }
+  }
+  
+  &--active {
+    // уменьшаем ширину иконки SVG при расскрытом меню
+    width: 24px;
+  }
+}

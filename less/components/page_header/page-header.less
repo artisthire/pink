@@ -1,17 +1,21 @@
 // out: null
 .page-header {
+  
   &__inner {
     background: url(@header-background-url) 0 0 no-repeat;
-    max-width: @mobile__max-width;
-    margin: 0 auto;
+    background-size: 100% 475px;
   }
+  
   &__nav-wrap {
     display: flex;
+    //размещение в основном меню
     justify-content: space-between;
-    position: relative;
+    //для позиционирования всплывающего меню main-nav
+    position: relative; 
     padding: @header-padding;
-    background-color: @nav-background-color;
     margin-bottom: 25px;
+    background-color: darken(@nav-background-color, 10%);
+
     &--menu-open {
       background-color: @nav-background-color--menu-open;
       box-shadow: 0px 1px 0px 0px @menu-shadow-color;

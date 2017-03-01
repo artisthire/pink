@@ -1,21 +1,20 @@
 // out: null
 .main-btn {
-  width: @load-btn-width;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  color: @load-btn-font-color;
-  font-size: @load-btn-font-size;
-  font-weight: 700;
-  padding: @load-btn-padding 0;
-  margin: 0 auto;
+  max-width: @mobile__block-max-width;
   margin-bottom: 30px;
   border: @load-btn-border-width solid @load-btn-border-color;
-  border-radius: @load-btn-border-radius;
   background-color: transparent;
   outline: none;
+  font-weight: 700;
+  color: @load-btn-font-color;
+  text-decoration: none;
+  text-align: center;
+  font-family: @font-family-base;
   
+  .center-block();
+  .button-size(@load-btn-padding-v, @load-btn-padding-h, @load-btn-font-size, @line-height, @load-btn-border-radius);
+  .text-overflow();
+
   &:hover {
     background-color: @load-btn-border-color;
     color: @load-btn-font-color--hvr;
