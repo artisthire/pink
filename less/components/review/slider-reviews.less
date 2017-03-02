@@ -1,0 +1,50 @@
+// out: null
+
+.slider-reviews {
+  max-width: @mobile__block-max-width;
+  &__item {
+    display: block;
+    margin-bottom: 40px;
+  }
+  
+  &__author {
+    display: block;
+    margin-bottom: 25px;
+    font-size: @font-size-h3;
+    font-weight: 700;
+    text-align: center;
+    color: @reviews-author-font-color;
+    line-height: @line-height;
+  }
+  
+  &__author-about {
+    display: none;
+    margin-bottom: 25px;
+    font-size: @font-size-base;
+    font-weight: 400;
+    text-align: center;
+    color: @reviews-text-font-color;
+    line-height: @line-height;
+  }
+  
+  &__text {
+    display: block;
+    font-size: @font-size-base;
+    font-weight: 400;
+    text-align: center;
+    color: @reviews-text-font-color;
+    line-height: @line-height;
+    quotes: "\00ab" "\00bb";
+    
+    &::before {
+      display: inline;
+      content: open-quote;
+    }
+    
+    &::after {
+      display: inline;
+      content: close-quote;
+    }
+  }
+  
+}

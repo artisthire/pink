@@ -12,12 +12,12 @@ toggle_btn.onclick = function(e) {
      toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
      this.classList.remove("menu-toggle-btn--active");
      menu_wrap.classList.remove("page-header__nav-wrap--menu-open");
-     menu.classList.add("main-nav--hide");
+     menu.style.display = "";
    } else {
      toggle_btn_SVG.setAttribute("xlink:href", "#menu-cross");
      this.classList.add("menu-toggle-btn--active");
      menu_wrap.classList.add("page-header__nav-wrap--menu-open");
-     menu.classList.remove("main-nav--hide");
+     menu.style.display = "block";
    }
 
  }

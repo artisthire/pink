@@ -1,7 +1,7 @@
 // out: null
 
 .promo {
-
+  
   &__slogan {
     display: block;
     padding: 45px 0 40px;
@@ -12,7 +12,6 @@
   &__slogan-header {
     display: block;
     max-width: @mobile__block-max-width;
-    margin-top: 0;
     margin-bottom: 45px;
     font-weight: 300;
     font-size: @font-size-h2;
@@ -47,8 +46,6 @@
   &__advantage-items {
     display: block;
     max-width: @mobile__block-max-width;
-    margin: 0;
-    padding: 0;
     list-style: none;
     
     .center-block();
@@ -67,24 +64,36 @@
   }
   
   &__advantage-image-wrap {
-    height: @advantage-image-wrap-height;
+    position: relative;
+    display: block;
     margin-top: 40px;
-    overflow: hidden;
-    order: 10;
+    //для перемещения рисунков за текстом слоганов
+    order: 100;
   
-    &--hide {
+    //в мобильной версии часть рисунков скрыта
+    &--hidden {
       display: none;
     }
   }
   
+  &__advantage-image-container {
+    display: block;
+    width: @advantage-image-container-width;
+    height: @advantage-image-container-height;
+  }
+  
   &__advantage-image {
+    position: absolute;
     width: @advantage-image-width;
     height: @advantage-image-height;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   &__advantage-header {
     display: block;
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
     font-size:@font-size-h3;
     font-weight: 700;
     line-height: @line-height;
@@ -92,7 +101,6 @@
   
   &__advantage-text {
     display: block;
-    margin: 0;
     font-weight: 400;
     color: @dark-gray;
     line-height: @line-height;

@@ -1,0 +1,45 @@
+// out: null
+
+.point-paginator {
+  display: block;
+  text-align: center;
+  counter-reset: paginator-items;
+  
+  .clear-bottom-part-letter();
+  
+  &__item {
+    display: inline-block;
+    margin-right: @paginator-margin-right;
+    border-radius: 50%;
+    background-color: @paginator-background-color;
+    text-indent: -9999px; 
+    vertical-align: middle;
+    
+    .square(@paginator-size);
+    .clear-bottom-part-letter();
+    
+    &::before {
+      display: inline-block;
+      counter-increment: paginator-items;
+      content: counter(paginator-items);
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      background-color: @paginator-background-color--hvr;
+    }
+  
+    &--active {
+      margin-right: @paginator-margin-right - @paginator-border-width;
+      border: @paginator-border-width solid @paginator-border-color;
+      background-color: @paginator-background-color--active;
+      
+      &:hover {
+        background-color: @paginator-background-color--active;
+      }
+    }
+  }
+}

@@ -1,17 +1,16 @@
 // out: null
 .main-nav {
+  //для мобильной версии по умолчанию не видно (всплывающее меню)
+  display: none;
   // позиционирование относительно главного заголовка
   position: absolute;
   top: @menu-position-top;
   left: 0;
-  display: block;
   width: 100%;
   //меню всплывает над всеми элементами страницы
   z-index: 10;
 
   &__items {
-    padding: 0;
-    margin: 0;
     list-style: none;
   }
   
@@ -46,8 +45,8 @@
       color: @base-color--fade;
     }
   }
- 
-  &--hide {
+  
+/*   &--hide {
     display: none;
-  }
+  } */
 }

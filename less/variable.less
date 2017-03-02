@@ -22,9 +22,15 @@
 
 // переменные для блока header
 @header-padding: 20px;
-@header-background-url: '../img/header_background.png';
+@header-background-image: '../img/background-1@1x.jpg';
+@header-background-height: 475px;
 //@header-background-color: #1d2631;
 @header-font-color: #fff;
+
+@product-background-height: 286px;
+@product-background-width: 258px;
+@product-background-image: '../img/iphone-hand-1.png';
+@product-background-top: @header-background-height - @product-background-height;
 
 @nav-background-color: fade(@dark-gray,60%);
 @nav-background-color--menu-open: @dark-gray;
@@ -38,9 +44,8 @@
 @menu-shadow-color: #000;
 @menu-font-size: @font-size-base + 4;
 
-@product-presentation-img-heigth: 198px;
-@product-presentation-img-width: 112px;
 
+//переменные кнопки загрузки
 @load-btn-font-size: @font-size-h3;
 @load-btn-font-color: @header-font-color;
 @load-btn-padding-v: 15px;
@@ -56,6 +61,23 @@
 // переменны для блока promo
 @promo-slogan-background-color: #fff;
 @promo-before-element-height: 35px;
-@advantage-image-height: 320px;
-@advantage-image-width: 157px;
-@advantage-image-wrap-height: 280px;
+@advantage-image-container-height: 280px;
+@advantage-image-container-width: 157px;
+@advantage-image-height: 245px;
+@advantage-image-width: 130px;
+
+
+
+//переменны для блока reviews
+@reviews-background-color: #fff;
+@reviews-author-font-color: #000;
+@reviews-text-font-color: @dark-gray;
+
+//переменные пагинатора
+@paginator-background-color: @light-gray;
+@paginator-margin-right: 20px;
+@paginator-size: 6px;
+@paginator-background-color--hvr: @dark-gray;
+@paginator-background-color--active: #fff;
+@paginator-border-width: 3px;
+@paginator-border-color: @dark-gray; 
