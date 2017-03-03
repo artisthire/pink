@@ -65,16 +65,14 @@ body {
   background-color: #ffffff;
 }
 .page-header__inner {
-  background-image: url('../img/iphone-hand-1.png'), url('../img/background-1@1x.jpg');
-  background-position: 0 189px, 50% 0;
-  background-repeat: no-repeat;
-  background-size: 258px 286px, auto 475px;
+  background: url('../img/background-1@1x.jpg') 50% 0 no-repeat;
+  background-size: auto 475px;
 }
 .page-header__nav-wrap {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 20px;
+  padding: 21px 20px;
   margin-bottom: 25px;
   background-color: rgba(21, 29, 37, 0.6);
 }
@@ -108,7 +106,7 @@ body {
 .main-nav {
   display: none;
   position: absolute;
-  top: 66px;
+  top: 68px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -127,6 +125,7 @@ body {
   margin-bottom: 2px;
   text-align: center;
   line-height: 62px;
+  letter-spacing: 0.09em;
   background-color: #283645;
   box-shadow: 0px 1px 0px 0px #000000;
 }
@@ -171,7 +170,7 @@ body {
 }
 .product-presentation__slogan {
   max-width: 280px;
-  margin-bottom: 320px;
+  margin-bottom: 15px;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.375em;
@@ -181,13 +180,17 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.product-presentation__img {
+  display: block;
+  height: 285px;
+}
 .product-download {
-  padding: 28px 0;
+  padding: 28px 0 31px;
   background-color: #283645;
 }
 .main-btn {
   max-width: 280px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   border: 4px solid #ffffff;
   background-color: transparent;
   outline: none;
@@ -199,10 +202,10 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px 30px;
+  padding: 11px 30px;
   font-size: 18px;
   line-height: 1.375em;
-  border-radius: 48px;
+  border-radius: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -217,7 +220,7 @@ body {
 }
 .OS-compability__logo-items {
   max-width: 280px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   list-style: none;
   text-align: center;
   display: block;
@@ -228,7 +231,7 @@ body {
   display: inline-block;
   width: 46px;
   margin-right: 36px;
-  vertical-align: middle;
+  vertical-align: bottom;
   font-size: 0;
   line-height: 0;
 }
@@ -238,8 +241,9 @@ body {
 .OS-compability__text-list {
   max-width: 280px;
   font-weight: 300;
-  line-height: 1.375em;
+  line-height: 1.71em;
   text-align: center;
+  letter-spacing: -0.02em;
   color: #ffffff;
   display: block;
   margin-left: auto;
@@ -247,12 +251,12 @@ body {
 }
 .promo__slogan {
   display: block;
-  padding: 45px 0 40px;
+  padding: 40px 0 24px;
   background-color: #ffffff;
 }
 .promo__slogan-header {
   max-width: 280px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.375em;
@@ -291,7 +295,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .promo__advantage-item:last-child {
@@ -313,37 +317,38 @@ body {
 }
 .promo__advantage-image {
   position: absolute;
-  width: 130px;
-  height: 245px;
+  width: 142px;
+  height: 243px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .promo__advantage-header {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.375em;
+  line-height: 1.71em;
 }
 .promo__advantage-text {
   display: block;
   font-weight: 400;
   color: #283645;
-  line-height: 1.375em;
+  line-height: 1.71em;
 }
 .reviews {
   background-color: #ffffff;
 }
 .reviews__inner {
-  padding: 50px 0;
-}
-.slider-reviews {
   max-width: 280px;
+  padding: 46px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .slider-reviews__item {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 .slider-reviews__author {
   display: block;
@@ -363,20 +368,20 @@ body {
   color: #283645;
   line-height: 1.375em;
 }
-.slider-reviews__text {
+.slider-reviews__author-comment {
   display: block;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: #283645;
-  line-height: 1.375em;
+  line-height: 2.1em;
   quotes: "\00ab" "\00bb";
 }
-.slider-reviews__text::before {
+.slider-reviews__author-comment::before {
   display: inline;
   content: open-quote;
 }
-.slider-reviews__text::after {
+.slider-reviews__author-comment::after {
   display: inline;
   content: close-quote;
 }

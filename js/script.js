@@ -1,7 +1,7 @@
 var toggle_btn = document.querySelector('.js-toggle-btn');
 var toggle_btn_SVG = document.querySelector('.js-toggle-btn__icon>use');
 
-var menu_wrap = document.querySelector('.js-page-header__nav-wrap');
+var menu_wrap = document.querySelector('.js-nav-wrap');
 var menu = document.querySelector('.js-main-nav');
 
 toggle_btn.onclick = function(e) {

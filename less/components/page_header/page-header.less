@@ -2,10 +2,8 @@
 .page-header {
   
   &__inner {
-    background-image: url(@product-background-image), url(@header-background-image);
-    background-position: 0 @product-background-top, 50% 0;
-    background-repeat: no-repeat;
-    background-size: @product-background-width @product-background-height, auto @header-background-height;
+    background: url(@header-background-image) 50% 0 no-repeat;
+    background-size:auto @header-background-height;
   }
   
   &__nav-wrap {
@@ -14,7 +12,7 @@
     justify-content: space-between;
     //для позиционирования всплывающего меню main-nav
     position: relative; 
-    padding: @header-padding;
+    padding: @header-padding-v @header-padding-h;
     margin-bottom: 25px;
     background-color: darken(@nav-background-color, 10%);
 

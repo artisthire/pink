@@ -12,7 +12,7 @@
 
    <header class="page-header">
     <div class="page-header__inner">
-      <div class="page-header__nav-wrap js-page-header__nav-wrap">
+      <div class="page-header__nav-wrap js-nav-wrap">
 
         <div class="logotype">
           <a href="" class="logotype-link">
@@ -42,6 +42,8 @@
 
       <div class="product-presentation">
         <h2 class="product-presentation__slogan">Взгляните на&nbsp;жизнь иначе!</h2>
+        
+        <img src="img/iphone-hand-1.png" alt="Product presentation" class="product-presentation__img">
 
         <div class="product-download">
           <button class="main-btn">Скачать приложение</button>
@@ -67,10 +69,10 @@
   <section class="promo">
     <div class="promo__inner">
 
-      <div class="promo__slogan">
+      <hgroup class="promo__slogan">
         <h2 class="promo__slogan-header">Устали от серости мегаполиса?</h2>
         <h2 class="promo__slogan-header">Нам есть, что вам предложить!</h2>
-      </div>
+      </hgroup>
 
       <div class="promo__advantages">
         <ul class="promo__advantage-items">
@@ -108,13 +110,16 @@
 
   <section class="reviews">
     <div class="reviews__inner">
-      <article class="slider-reviews__item">
-        <h3 class="slider-reviews__author">Николай Петров</h3>
-
-        <h4 class="slider-reviews__author-about slider-reviews__author-about--hide">25 лет, водитель трамвая</h4>
-
-        <blockquote class="slider-reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
-      </article>
+     
+      <div class="slider-reviews">
+        <article class="slider-reviews__item">
+          <h3 class="slider-reviews__author">Николай Петров</h3>
+        
+          <div class="slider-reviews__author-about">25 лет, водитель трамвая</div>
+        
+          <blockquote class="slider-reviews__author-comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
+        </article>
+      </div>
 
       <div class="point-paginator">
         <i class="point-paginator__item point-paginator__item--active"></i>
@@ -192,11 +197,12 @@
         </tr>
       </table>
 
-      <div class="price__table-paginator">
-        <i class="slider-reviews__paginator-active">1</i>
-        <i>2</i>
-        <i>3</i>
+      <div class="point-paginator">
+        <i class="point-paginator__item point-paginator__item--active"></i>
+        <i class="point-paginator__item"></i>
+        <i class="point-paginator__item"></i>
       </div>
+    </div>
 
     </div>
   </section>
@@ -205,24 +211,24 @@
 
   <section class="contacts">
     <div class="contacts__inner">
-      <h3 class="contacts__header">
-        <p>Остались вопросы?</p>
-        <p>Свяжитесь с нами!</p>
-      </h3>
+      <hgroup class="contacts__header">
+        <h2>Остались вопросы?</h2>
+        <h2>Свяжитесь с нами!</h2>
+      </hgroup>
 
       <ul class="contacts__items">
         <li class="contacts__telephone">
           <h3>Звоните:</h3>
-          <div class="contacts__telephone-number"><a href="tel:+388001000900">8 (800) 1000 900</a></div>
+          <p class="contacts__telephone-number"><a href="tel:+388001000900">8 (800) 1000 900</a></p>
         </li>
         <li class="contacts__email">
           <h3>Пишите:</h3>
-          <div class="contacts__email-address"><a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></div>
+          <p class="contacts__email-address"><a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
         </li>
         <li class="contacts__address">
           <h3>Приезжайте в гости:</h3>
-          <div class="contacts__address-post">Санкт-Петербург,
-            <br> Невский проспект, д. 20</div>
+          <p class="contacts__address-post">Санкт-Петербург,
+            <br> Невский проспект, д. 20</p>
         </li>
       </ul>
 
