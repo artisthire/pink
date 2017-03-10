@@ -132,80 +132,93 @@
 
 
   <section class="price">
-    <div class="price__inner">
+  <div class="price__inner">
 
-      <table class="price__table">
-        <tr class="price__table-row-1">
-          <td class="price__table-col-1"></td>
-          <td class="price__table-col-2">
-            <div class="price__grade">База</div>
-            <div class="price_money"><span>1,99</span>USD</div>
+    <table class="price__table">
+      <thead>
+        <tr>
+          <td class="price__table-header"></td>
+          <td class="price__table-header">
+            <div class="price__product-level">База</div>
+            <div class="price__product-money">1,99 USD</div>
           </td>
-          <td class="price__table-col-3">
-            <div class="price__grade price__grade--hit">Стандарт</div>
-            <div class="price_money"><span>3,99</span>USD</div>
+          <td class="price__table-header price__table-header--hit" data-hit-text="Хит">
+            <div class="price__product-level">Стандарт</div>
+            <div class="price__product-money">3,99 USD</div>
           </td>
-          <td class="price__table-col-4">
-            <div class="price__grade">Анлим</div>
-            <div class="price_money"><span>9,99</span>USD</div>
-          </td>
-        </tr>
-        <tr class="price__table-row-2">
-          <td class="price__table-col-1">Розовый фильтр</td>
-          <td class="price__table-col-2">
-            <span class="price__position">Розовый фильтр</span>
-            <span class="price__position-checked"></span>
-          </td>
-          <td class="price__table-col-3">
-            <span class="price__position">Розовый фильтр</span>
-            <span class="price__position-unchecked"></span>
-          </td>
-          <td class="price__table-col-4">
-            <span class="price__position">Розовый фильтр</span>
-            <span class="price__position-unchecked"></span>
+          <td class="price__table-header">
+            <div class="price__product-level">Анлим</div>
+            <div class="price__product-money">9,99 USD</div>
           </td>
         </tr>
-        <tr class="price__table-row-3">
-          <td class="price__table-col-1">Смайлики</td>
-          <td class="price__table-col-2">
-            <span class="price__position">Смайлики</span>
-            <span class="price__position-checked"></span>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="price__product-name">Розовый фильтр</td>
+          <td class="price__product-name">Розовый фильтр 
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
           </td>
-          <td class="price__table-col-3">
-            <span class="price__position">Смайлики</span>
-            <span class="price__position-checked"></span>
+          <td class="price__product-name">Розовый фильтр
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
           </td>
-          <td class="price__table-col-4">
-            <span class="price__position">Смайлики</span>
-            <span class="price__position-unchecked"></span>
-          </td>
-        </tr>
-        <tr class="price__table-row-4">
-          <td class="price__table-col-1">Комментарии</td>
-          <td class="price__table-col-2">
-            <span class="price__position">Комментарии</span>
-            <span class="price__position-checked"></span>
-          </td>
-          <td class="price__table-col-3">
-            <span class="price__position">Комментарии</span>
-            <span class="price__position-checked"></span>
-          </td>
-          <td class="price__table-col-4">
-            <span class="price__position">Комментарии</span>
-            <span class="price__position-checked"></span>
+          <td class="price__product-name">Розовый фильтр
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
           </td>
         </tr>
-      </table>
+        <tr>
+          <td class="price__product-name">Смайлики</td>
+          <td class="price__product-name">Смайлики
+            <svg class="price__product-unchecked">
+              <use xlink:href="#position-unchecked">
+            </svg>
+          </td>
+          <td class="price__product-name">Смайлики
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
+          </td>
+          <td class="price__product-name">Смайлики
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td class="price__product-name">Комментарии</td>
+          <td class="price__product-name">Комментарии
+            <svg class="price__product-unchecked">
+              <use xlink:href="#position-unchecked">
+            </svg>
+          </td>
+          <td class="price__product-name">Комментарии
+            <svg class="price__product-unchecked">
+              <use xlink:href="#position-unchecked">
+            </svg>
+          </td>
+          <td class="price__product-name">Комментарии
+            <svg class="price__product-checked">
+              <use xlink:href="#position-checked">
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <div class="point-paginator">
-        <i class="point-paginator__item point-paginator__item--active"></i>
-        <i class="point-paginator__item"></i>
-        <i class="point-paginator__item"></i>
-      </div>
+    <div class="point-paginator">
+      <i class="point-paginator__item"></i>
+      <i class="point-paginator__item point-paginator__item--active"></i>
+      <i class="point-paginator__item"></i>
     </div>
+  </div>
 
-    </div>
-  </section>
+  </div>
+</section>
 
 
 
@@ -259,6 +272,15 @@ M56,1.3a1.28,1.28,0,1,1,2.57,0V13.73L71.56.45a1.46,1.46,0,0,1,1-.45A1.28,1.28,0,
 	l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22
 	c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094
 	c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z" />
+    
+    <path id="position-unchecked" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+    
+    <path id="position-checked" d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0
+	s-0.586,1.535,0,2.121l8.688,8.688c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439L29.936,2.561
+	C30.521,1.975,30.521,1.025,29.936,0.439z"/>
 
     </defs>
   </svg>

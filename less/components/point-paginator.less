@@ -5,18 +5,17 @@
   text-align: center;
   counter-reset: paginator-items;
   
-  .clear-bottom-part-letter();
+  .hidden-text();
   
   &__item {
     display: inline-block;
     margin-right: @paginator-margin-right;
     border-radius: 50%;
     background-color: @paginator-background-color;
-    text-indent: -9999px; 
     vertical-align: middle;
     
     .square(@paginator-size);
-    .clear-bottom-part-letter();
+    .hidden-text();
     
     &::before {
       display: inline-block;
