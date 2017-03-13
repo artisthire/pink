@@ -57,6 +57,9 @@ body > * {
 .point-paginator__item:hover {
   background-color: #283645;
 }
+.point-paginator__item:active {
+  background-color: #e9ebec;
+}
 .point-paginator__item--active {
   margin-right: 17px;
   border: 3px solid #283645;
@@ -64,6 +67,9 @@ body > * {
 }
 .point-paginator__item--active:hover {
   background-color: #ffffff;
+}
+.point-paginator__item--active:last-child {
+  margin-left: -3px;
 }
 .page-header__inner {
   background: url('../img/background-1@1x.jpg') 50% 0 no-repeat;
@@ -187,6 +193,8 @@ body > * {
 .product-presentation__img {
   display: block;
   height: 285px;
+  width: 100%;
+  max-width: 258px;
 }
 .product-download {
   padding: 28px 0 31px;
@@ -210,9 +218,6 @@ body > * {
   font-size: 18px;
   line-height: 1.375em;
   border-radius: 40px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .main-btn:hover {
   background-color: #ffffff;
@@ -352,11 +357,14 @@ body > * {
 }
 .slider-reviews__item {
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 40px;
+}
+.slider-reviews__item--hidden {
+  display: none;
 }
 .slider-reviews__author {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -365,7 +373,7 @@ body > * {
 }
 .slider-reviews__author-about {
   display: none;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -391,7 +399,7 @@ body > * {
 }
 .price__inner {
   position: relative;
-  padding: 80px 0 48px;
+  padding: 90px 0 48px;
   overflow: hidden;
   background-color: #f2f2f2;
 }
@@ -407,14 +415,16 @@ body > * {
 }
 .price__table {
   display: table;
-  margin-bottom: 45px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
   border-collapse: collapse;
-  transform: translateX(-30.5%);
 }
 .price__table-header {
   min-width: 114px;
   position: relative;
-  padding: 21px 80px;
+  padding: 22px 80px;
   border: 2px solid #e5e5e5;
   border-top-color: transparent;
   border-bottom-color: #283645;
@@ -430,7 +440,7 @@ body > * {
 }
 .price__table-header--hit::before {
   position: absolute;
-  left: -40%;
+  left: -42%;
   top: 10%;
   background-color: #d22856;
   content: attr(data-hit-text);
@@ -461,7 +471,7 @@ body > * {
 }
 .price__product-name {
   box-sizing: border-box;
-  height: 59px;
+  height: 61px;
   padding: 0 22px;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
@@ -491,4 +501,96 @@ body > * {
   fill: #f25c28;
   width: 26px;
   height: 26px;
+}
+.contacts__inner {
+  padding: 45px 0;
+  line-height: 2em;
+  background-color: #ffffff;
+}
+.contacts__header {
+  color: #283645;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+.contacts__header-group {
+  margin-bottom: 34px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacts__items {
+  position: relative;
+  list-style: none;
+  padding-bottom: 42px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacts__items::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 50%;
+  height: 30px;
+  z-index: 100;
+  background: linear-gradient(to right bottom, #ffffff 50%, transparent 50%);
+}
+.contacts__items::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50%;
+  height: 30px;
+  z-index: 100;
+  background: linear-gradient(to left bottom, #ffffff 50%, transparent 50%);
+}
+.contacts__item {
+  margin-bottom: 20px;
+}
+.contacts__item:last-child {
+  margin-bottom: 0;
+}
+.contacts__item-header {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #283645;
+}
+.contacts__item-info {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  color: #d22856;
+}
+.contacts__item-info--email:hover {
+  color: #283645;
+  text-decoration: underline;
+}
+.contacts__item-info--email:active {
+  color: #bec2c7;
+  text-decoration: none;
+}
+.contacts__geolocation {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: url("../img/map_mb.png") 50% 100% no-repeat;
+  background-size: 100% 645px;
+}
+.contacts__geolocation::after {
+  position: absolute;
+  left: 50%;
+  top: 95px;
+  width: 16px;
+  height: 16px;
+  content: "";
+  border: 10px solid #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: #d22856;
 }

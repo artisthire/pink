@@ -4,7 +4,7 @@
   
   &__inner {
     position: relative;
-    padding: 80px 0 48px;
+    padding: 90px 0 48px;
     overflow: hidden;
     background-color: @price-background-color;
     
@@ -22,16 +22,19 @@
   
   &__table {
     display: table;
-    margin-bottom: 45px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
     border-collapse: collapse;
     //сдвиг таблицы для мобильной версии;
-    transform: translateX(-30.5%);
+   
   }
   
   &__table-header {
     min-width: 114px;
     position: relative;
-    padding: 21px 80px;
+    padding: 22px 80px;
     border: 2px solid #e5e5e5;
     border-top-color: transparent;
     border-bottom-color: @price-header-background-color;
@@ -48,7 +51,7 @@
     
     &--hit::before {
       position: absolute;
-      left: -40%;
+      left: -42%;
       top: 10%;
       background-color: #d22856;
       content: attr(data-hit-text);
@@ -85,7 +88,7 @@
   
   &__product-name {
     box-sizing: border-box;
-    height: 59px;
+    height: 61px;
     padding: 0 22px;
     border: 2px solid #e5e5e5;
     background-color: @price-body-background-color;

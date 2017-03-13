@@ -32,15 +32,15 @@
 
         <nav class="main-nav js-main-nav">
           <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Информация</a></li>
-            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Возможности</a></li>
-            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Отзывы</a></li>
-            <li class="main-nav__item"><a href="" class='main-nav__item-link'>Стоимость</a></li>
+            <li class="main-nav__item"><a href="#info" class='main-nav__item-link'>Информация</a></li>
+            <li class="main-nav__item"><a href="#promo" class='main-nav__item-link'>Возможности</a></li>
+            <li class="main-nav__item"><a href="#reviews" class='main-nav__item-link'>Отзывы</a></li>
+            <li class="main-nav__item"><a href="#price" class='main-nav__item-link'>Стоимость</a></li>
           </ul>
         </nav>
       </div>
 
-      <div class="product-presentation">
+      <div class="product-presentation" id="info">
         <h2 class="product-presentation__slogan">Взгляните на&nbsp;жизнь иначе!</h2>
         
         <img src="img/iphone-hand-1.png" alt="Product presentation" class="product-presentation__img">
@@ -66,7 +66,7 @@
 
 
 
-  <section class="promo">
+  <section class="promo" id="promo">
     <div class="promo__inner">
 
       <hgroup class="promo__slogan">
@@ -108,7 +108,7 @@
 
 
 
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <div class="reviews__inner">
      
       <div class="slider-reviews">
@@ -119,9 +119,25 @@
         
           <blockquote class="slider-reviews__author-comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
         </article>
+        
+        <article class="slider-reviews__item slider-reviews__item--hidden">
+          <h3 class="slider-reviews__author">Петр Николаев</h3>
+        
+          <div class="slider-reviews__author-about">48 лет, водитель троллейбуса</div>
+        
+          <blockquote class="slider-reviews__author-comment">Это приложение перевернуло мой троллейбус! Оно не позволило мне вовремя взглянуть на дорогу! Автор "убейся"!!</blockquote>
+        </article>
+        
+        <article class="slider-reviews__item slider-reviews__item--hidden">
+          <h3 class="slider-reviews__author">Николай Николаев</h3>
+        
+          <div class="slider-reviews__author-about">58 лет, водитель автобуса</div>
+        
+          <blockquote class="slider-reviews__author-comment">Классное приложение! Сфоткал всех пассажиров. После этого в придачу к стоимости билета беру деньги за фото. А еще оно помогло мне насобирать на квартиру!</blockquote>
+        </article>
       </div>
-
-      <div class="point-paginator">
+      
+      <div class="point-paginator" id="reviews__paginator">
         <i class="point-paginator__item point-paginator__item--active"></i>
         <i class="point-paginator__item"></i>
         <i class="point-paginator__item"></i>
@@ -131,7 +147,7 @@
 
 
 
-  <section class="price">
+  <section class="price" id="price">
   <div class="price__inner">
 
     <table class="price__table">
@@ -210,7 +226,7 @@
       </tbody>
     </table>
 
-    <div class="point-paginator">
+    <div class="point-paginator" id="price-table__paginator">
       <i class="point-paginator__item"></i>
       <i class="point-paginator__item point-paginator__item--active"></i>
       <i class="point-paginator__item"></i>
@@ -224,30 +240,27 @@
 
   <section class="contacts">
     <div class="contacts__inner">
-      <hgroup class="contacts__header">
-        <h2>Остались вопросы?</h2>
-        <h2>Свяжитесь с нами!</h2>
+      <hgroup class="contacts__header-group">
+        <h2 class="contacts__header">Остались вопросы?</h2>
+        <h2 class="contacts__header">Свяжитесь с нами!</h2>
       </hgroup>
 
       <ul class="contacts__items">
-        <li class="contacts__telephone">
-          <h3>Звоните:</h3>
-          <p class="contacts__telephone-number"><a href="tel:+388001000900">8 (800) 1000 900</a></p>
+        <li class="contacts__item">
+          <h3 class="contacts__item-header">Звоните:</h3>
+          <a href="tel:+388001000900" class="contacts__item-info">8 (800) 1000 900</a>
         </li>
-        <li class="contacts__email">
-          <h3>Пишите:</h3>
-          <p class="contacts__email-address"><a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
+        <li class="contacts__item">
+          <h3 class="contacts__item-header">Пишите:</h3>
+          <a href="mailto:hello@pinkapp.ru" class="contacts__item-info contacts__item-info--email">hello@pinkapp.ru</a>
         </li>
-        <li class="contacts__address">
-          <h3>Приезжайте в гости:</h3>
-          <p class="contacts__address-post">Санкт-Петербург,
-            <br> Невский проспект, д. 20</p>
+        <li class="contacts__item">
+          <h3 class="contacts__item-header">Приезжайте в гости:</h3>
+          <div class="contacts__item-info">Санкт-Петербург, Невский&nbsp;проспект, д.&nbsp;20</div>
         </li>
       </ul>
-
-      <div class="contacts__geolocation">
-
-      </div>
+      
+      <div class="contacts__geolocation"> </div>
     </div>
   </section>
 
