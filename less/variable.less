@@ -20,14 +20,13 @@
 @line-height: 1.375em;
 @line-height--big: 1.71em;
 
+@logotype-height: 24px;
 
 // переменные для блока header
-@header-padding-h: 20px;
-@header-padding-v: 21px;
 @header-background-image: '../img/background-1@1x.jpg';
 @header-background-height: 475px;
-//@header-background-color: #1d2631;
 @header-font-color: #fff;
+@header-padding-v: 21px;
 
 @product-background-height: 286px;
 @product-background-width: 258px;
@@ -37,23 +36,20 @@
 @nav-background-color: fade(@dark-gray,60%);
 @nav-background-color--menu-open: @dark-gray;
 
-@logotype-height: @font-size-h2;
-
 @menu-height-item: 62px;
-@menu-position-top: @logotype-height + @header-padding-v*2 + 2;
 @menu-color: @dark-gray;
 @menu-border-top-color: lighten(@dark-gray, 11.37);//#475360;
 @menu-shadow-color: #000;
-@menu-font-size: @font-size-base + 4;
+@menu-font-size: 18px;
 
 
 //переменные кнопки загрузки
-@load-btn-font-size: @font-size-h3;
-@load-btn-font-color: @header-font-color;
+@load-btn-font-size: 18px;
+@load-btn-font-color: #fff;
 @load-btn-padding-v: 11px;
 @load-btn-padding-h: 30px;
 @load-btn-border-width: 4px;
-@load-btn-border-color: @header-font-color;
+@load-btn-border-color: @load-btn-font-color;
 @load-btn-border-radius: 2*@load-btn-padding-v + @load-btn-font-size;
 @load-btn-font-color--hvr: @base-color;
 @load-btn-font-color--active: @base-color--fade;

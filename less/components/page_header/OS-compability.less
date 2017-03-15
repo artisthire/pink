@@ -2,29 +2,25 @@
 .OS-compability {
   
   &__logo-items {
-    max-width: @mobile__block-max-width;
-    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 210px;
+    margin: 0 auto;
     list-style: none;
     text-align: center;
-    
-    .center-block();
   }
   
   &__logo-item {
-    display: inline-block;
+    display: block;
     width: 46px;
-    margin-right: 36px;
-    vertical-align: bottom;
+    margin-bottom: 7%;
     
     .hidden-text();
-    
-    &:last-child {
-      margin-right: 0;
-    }
   }
   
   &__text-list {
-    max-width: @mobile__block-max-width;
     font-weight: 300;
     line-height: @line-height--big;
     text-align: center;

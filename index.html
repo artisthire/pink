@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
 <body>
 
-   <header class="page-header">
+  <header class="page-header">
     <div class="page-header__inner">
       <div class="page-header__nav-wrap js-nav-wrap">
 
@@ -29,30 +29,30 @@
           </svg>
           toggle menu
         </button>
-
-        <nav class="main-nav js-main-nav">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="#info" class='main-nav__item-link'>Информация</a></li>
-            <li class="main-nav__item"><a href="#promo" class='main-nav__item-link'>Возможности</a></li>
-            <li class="main-nav__item"><a href="#reviews" class='main-nav__item-link'>Отзывы</a></li>
-            <li class="main-nav__item"><a href="#price" class='main-nav__item-link'>Стоимость</a></li>
-          </ul>
-        </nav>
       </div>
+
+      <nav class="main-nav js-main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="#info" class='main-nav__item-link'>Информация</a></li>
+          <li class="main-nav__item"><a href="#promo" class='main-nav__item-link'>Возможности</a></li>
+          <li class="main-nav__item"><a href="#reviews" class='main-nav__item-link'>Отзывы</a></li>
+          <li class="main-nav__item"><a href="#price" class='main-nav__item-link'>Стоимость</a></li>
+        </ul>
+      </nav>
 
       <div class="product-presentation" id="info">
         <h2 class="product-presentation__slogan">Взгляните на&nbsp;жизнь иначе!</h2>
-        
-        <img src="img/iphone-hand-1.png" alt="Product presentation" class="product-presentation__img">
+
+        <img src="img/iphone-hand-1.png" alt="Изображение с презентацией продукта" title="Изображение с презентацией продукта" class="product-presentation__img">
 
         <div class="product-download">
           <button class="main-btn">Скачать приложение</button>
 
           <article class="OS-compability">
             <ul class="OS-compability__logo-items">
-              <li class="OS-compability__logo-item"><img src="img/apple.png" alt="Apple"></li>
-              <li class="OS-compability__logo-item"><img src="img/android.png" alt="Android"></li>
-              <li class="OS-compability__logo-item"><img src="img/microsoft.png" alt="Microsoft"></li>
+              <li class="OS-compability__logo-item"><img src="img/symbol_APPLE.svg" alt="Apple" title="Apple"></li>
+              <li class="OS-compability__logo-item"><img src="img/symbol_ANDROID.svg" alt="Android" title="Android"></li>
+              <li class="OS-compability__logo-item"><img src="img/symbol_MICROSOFT.svg" alt="Microsoft" title="Microsoft"></li>
             </ul>
 
             <p class="OS-compability__text-list">Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac OS, Windows 8</p>
@@ -75,28 +75,32 @@
       </hgroup>
 
       <div class="promo__advantages">
-        <ul class="promo__advantage-items">
-          <li class="promo__advantage-item">
-            <div class="promo__advantage-image-wrap promo__advantage-image-wrap--hidden">
-              <img src="img/iphone-case-1@1x.png" alt="Phone case" class="promo__advantage-image-container">
-              <img src="img/iphone-screen-1-1@1x.png" alt="Grey screen" class="promo__advantage-image">
-            </div>
+
+        <ul class="promo__advantage-image-items">
+          <li class="promo__advantage-image-item">
+            <img class="promo__advantage-image-container" src="img/iphone-case-1@1x.png" alt="Корпус телефона" title="Корпус телефона">
+            <img class="promo__advantage-image" src="img/iphone-screen-1-1@1x.png" alt="Серый экран" title="Серый экран">
+          </li>
+          <li class="promo__advantage-image-item">
+            <img class="promo__advantage-image-container" src="img/iphone-case-1@1x.png" alt="Корпус телефона" title="Корпус телефона">
+            <img class="promo__advantage-image" src="img/iphone-screen-1-2@1x.png" alt="Розовый экран" title="Розовый экран">
+          </li>
+          <li class="promo__advantage-image-item">
+            <img class="promo__advantage-image-container" src="img/iphone-case-1@1x.png" alt="Корпус телефона" title="Корпус телефона">
+            <img class="promo__advantage-image" src="img/iphone-screen-1-3@1x.png" alt="Розовый экран со смайликом" title="Розовый экран со смайликом">
+          </li>
+        </ul>
+
+        <ul class="promo__advantage-text-items">
+          <li class="promo__advantage-text-item">
             <h3 class="promo__advantage-header">Поднимает настроение</h3>
             <p class="promo__advantage-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов</p>
           </li>
-          <li class="promo__advantage-item">
-            <div class="promo__advantage-image-wrap promo__advantage-image-wrap--hidden">
-              <img src="img/iphone-case-1@1x.png" alt="Phone case" class="promo__advantage-image-container">
-              <img src="img/iphone-screen-1-2@1x.png" alt="Pink screen" class="promo__advantage-image">
-            </div>
+          <li class="promo__advantage-text-item">
             <h3 class="promo__advantage-header">Меняет мир вокруг</h3>
             <p class="promo__advantage-text">Сделайте снимок и украсте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
-          <li class="promo__advantage-item">
-            <div class="promo__advantage-image-wrap">
-              <img src="img/iphone-case-1@1x.png" alt="Phone case" class="promo__advantage-image-container">
-              <img src="img/iphone-screen-1-3@1x.png" alt="Pink screen with smail" class="promo__advantage-image">
-            </div>
+          <li class="promo__advantage-text-item">
             <h3 class="promo__advantage-header">Заводит новых друзей</h3>
             <p class="promo__advantage-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
@@ -110,33 +114,33 @@
 
   <section class="reviews" id="reviews">
     <div class="reviews__inner">
-     
-      <div class="slider-reviews">
+
+      <div class="slider-reviews" id="slider-reviews">
         <article class="slider-reviews__item">
           <h3 class="slider-reviews__author">Николай Петров</h3>
-        
+
           <div class="slider-reviews__author-about">25 лет, водитель трамвая</div>
-        
+
           <blockquote class="slider-reviews__author-comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
         </article>
-        
+
         <article class="slider-reviews__item slider-reviews__item--hidden">
           <h3 class="slider-reviews__author">Петр Николаев</h3>
-        
+
           <div class="slider-reviews__author-about">48 лет, водитель троллейбуса</div>
-        
+
           <blockquote class="slider-reviews__author-comment">Это приложение перевернуло мой троллейбус! Оно не позволило мне вовремя взглянуть на дорогу! Автор "убейся"!!</blockquote>
         </article>
-        
+
         <article class="slider-reviews__item slider-reviews__item--hidden">
           <h3 class="slider-reviews__author">Николай Николаев</h3>
-        
+
           <div class="slider-reviews__author-about">58 лет, водитель автобуса</div>
-        
+
           <blockquote class="slider-reviews__author-comment">Классное приложение! Сфоткал всех пассажиров. После этого в придачу к стоимости билета беру деньги за фото. А еще оно помогло мне насобирать на квартиру!</blockquote>
         </article>
       </div>
-      
+
       <div class="point-paginator" id="reviews__paginator">
         <i class="point-paginator__item point-paginator__item--active"></i>
         <i class="point-paginator__item"></i>
@@ -148,93 +152,93 @@
 
 
   <section class="price" id="price">
-  <div class="price__inner">
+    <div class="price__inner">
 
-    <table class="price__table">
-      <thead>
-        <tr>
-          <td class="price__table-header"></td>
-          <td class="price__table-header">
-            <div class="price__product-level">База</div>
-            <div class="price__product-money">1,99 USD</div>
-          </td>
-          <td class="price__table-header price__table-header--hit" data-hit-text="Хит">
-            <div class="price__product-level">Стандарт</div>
-            <div class="price__product-money">3,99 USD</div>
-          </td>
-          <td class="price__table-header">
-            <div class="price__product-level">Анлим</div>
-            <div class="price__product-money">9,99 USD</div>
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="price__product-name">Розовый фильтр</td>
-          <td class="price__product-name">Розовый фильтр 
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-          <td class="price__product-name">Розовый фильтр
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-          <td class="price__product-name">Розовый фильтр
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td class="price__product-name">Смайлики</td>
-          <td class="price__product-name">Смайлики
-            <svg class="price__product-unchecked">
-              <use xlink:href="#position-unchecked">
-            </svg>
-          </td>
-          <td class="price__product-name">Смайлики
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-          <td class="price__product-name">Смайлики
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td class="price__product-name">Комментарии</td>
-          <td class="price__product-name">Комментарии
-            <svg class="price__product-unchecked">
-              <use xlink:href="#position-unchecked">
-            </svg>
-          </td>
-          <td class="price__product-name">Комментарии
-            <svg class="price__product-unchecked">
-              <use xlink:href="#position-unchecked">
-            </svg>
-          </td>
-          <td class="price__product-name">Комментарии
-            <svg class="price__product-checked">
-              <use xlink:href="#position-checked">
-            </svg>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="price__table" id="price-table">
+        <thead>
+          <tr>
+            <td class="price__table-header"></td>
+            <td class="price__table-header">
+              <div class="price__product-level">База</div>
+              <div class="price__product-money">1,99 USD</div>
+            </td>
+            <td class="price__table-header price__table-header--hit" data-hit-text="Хит">
+              <div class="price__product-level">Стандарт</div>
+              <div class="price__product-money">3,99 USD</div>
+            </td>
+            <td class="price__table-header">
+              <div class="price__product-level">Анлим</div>
+              <div class="price__product-money">9,99 USD</div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="price__product-name">Розовый фильтр</td>
+            <td class="price__product-name">Розовый фильтр
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+            <td class="price__product-name">Розовый фильтр
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+            <td class="price__product-name">Розовый фильтр
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td class="price__product-name">Смайлики</td>
+            <td class="price__product-name">Смайлики
+              <svg class="price__product-unchecked">
+                <use xlink:href="#position-unchecked">
+              </svg>
+            </td>
+            <td class="price__product-name">Смайлики
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+            <td class="price__product-name">Смайлики
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td class="price__product-name">Комментарии</td>
+            <td class="price__product-name">Комментарии
+              <svg class="price__product-unchecked">
+                <use xlink:href="#position-unchecked">
+              </svg>
+            </td>
+            <td class="price__product-name">Комментарии
+              <svg class="price__product-unchecked">
+                <use xlink:href="#position-unchecked">
+              </svg>
+            </td>
+            <td class="price__product-name">Комментарии
+              <svg class="price__product-checked">
+                <use xlink:href="#position-checked">
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <div class="point-paginator" id="price-table__paginator">
-      <i class="point-paginator__item"></i>
-      <i class="point-paginator__item point-paginator__item--active"></i>
-      <i class="point-paginator__item"></i>
+      <div class="point-paginator" id="price-table__paginator">
+        <i class="point-paginator__item"></i>
+        <i class="point-paginator__item point-paginator__item--active"></i>
+        <i class="point-paginator__item"></i>
+      </div>
     </div>
-  </div>
 
-  </div>
-</section>
+    </div>
+  </section>
 
 
 
@@ -259,7 +263,7 @@
           <div class="contacts__item-info">Санкт-Петербург, Невский&nbsp;проспект, д.&nbsp;20</div>
         </li>
       </ul>
-      
+
       <div class="contacts__geolocation"> </div>
     </div>
   </section>
@@ -285,15 +289,15 @@ M56,1.3a1.28,1.28,0,1,1,2.57,0V13.73L71.56.45a1.46,1.46,0,0,1,1-.45A1.28,1.28,0,
 	l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22
 	c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094
 	c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z" />
-    
-    <path id="position-unchecked" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+
+      <path id="position-unchecked" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
 	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
 	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
-	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
-    
-    <path id="position-checked" d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0
+	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
+
+      <path id="position-checked" d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0
 	s-0.586,1.535,0,2.121l8.688,8.688c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439L29.936,2.561
-	C30.521,1.975,30.521,1.025,29.936,0.439z"/>
+	C30.521,1.975,30.521,1.025,29.936,0.439z" />
 
     </defs>
   </svg>

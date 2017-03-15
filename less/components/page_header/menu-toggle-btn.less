@@ -7,7 +7,7 @@
   background-color: transparent;
   cursor: pointer;
   
-  .size(50px; 24px);
+  .size(50px; @logotype-height);
   .hidden-text();
   .text-overflow();
 
@@ -25,6 +25,6 @@
   
   &--active {
     // уменьшаем ширину иконки SVG при расскрытом меню
-    .square(24px);
+    .square(@logotype-height);
   }
 }
