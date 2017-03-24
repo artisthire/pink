@@ -1,6 +1,7 @@
 // out: null
 
 .logotype {
+  display: block;
   .hidden-text();
   
   &-link {
@@ -8,22 +9,34 @@
     vertical-align: bottom;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  &-text {
-    //заливка SVG-рисунка
+    .text-overflow();
+    
+      //заливка SVG-рисунка
     fill: @header-font-color;
     
-    .text-overflow();
-    .size(74px; @logotype-height);
-    .hidden-text();
-    
-    &:hover {
+     &:hover {
       fill: @base-color;
     }
     
     &:active {
       fill: @gray-color--fade;
     }
+  }
+  
+  &-icon {
+    display: none;
+    
+    .size(59px; 40px);
+    margin-right: 12px;
+    
+    @media(min-width: 700px) {
+      display: inline-block;
+    }
+  }
+  
+  &-text {
+    display: inline-block;
+    
+    .size(74px; @logotype-height);
   }
 }

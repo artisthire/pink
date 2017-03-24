@@ -3,8 +3,8 @@
 .slider-reviews {
   
   &__item {
-    display: block;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
     
     &--hidden {
       display: none;
@@ -12,6 +12,7 @@
   }
   
   &__author {
+    order: -1;
     display: block;
     margin-bottom: 15px;
     font-size: @font-size-h3;

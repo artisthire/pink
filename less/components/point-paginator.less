@@ -2,6 +2,7 @@
 
 .point-paginator {
   display: block;
+  margin-top: 40px;
   text-align: center;
   counter-reset: paginator-items;
   
@@ -11,6 +12,8 @@
     display: inline-block;
     margin-right: @paginator-margin-right;
     border-radius: 50%;
+    border: @paginator-border-width solid transparent;
+    background-clip: padding-box;
     background-color: @paginator-background-color;
     vertical-align: middle;
     
@@ -36,16 +39,11 @@
     }
   
     &--active {
-      margin-right: @paginator-margin-right - @paginator-border-width;
-      border: @paginator-border-width solid @paginator-border-color;
+      border-color: @paginator-border-color;
       background-color: @paginator-background-color--active;
       
       &:hover {
         background-color: @paginator-background-color--active;
-      }
-      
-      &:last-child {
-        margin-left: -3px;
       }
     }
   }
