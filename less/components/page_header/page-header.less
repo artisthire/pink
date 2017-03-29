@@ -1,9 +1,21 @@
 // out: null
 .page-header {
   
+  @media(min-width: 700px) {
+      position: relative;
+    }
+  
   &__inner {
     background: url(@header-background-image) 50% 0 no-repeat;
-    background-size:auto @header-background-height;
+    background-size:auto 100%;
+    
+    @media(min-width: 700px) {
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
     
   }
   
@@ -14,12 +26,43 @@
     align-items: flex-end;
     //для позиционирования всплывающего меню main-nav
     position: relative; 
-    padding: 6.5%;
+    padding: 5.5%;
+    margin-bottom: 10%;
     background-color: darken(@nav-background-color, 10%);
 
     &--menu-open {
       background-color: @nav-background-color--menu-open;
       box-shadow: 0px 1px 0px 0px @menu-shadow-color;
+    }
+  }
+  
+   &__slogan {
+    max-width: @mobile__block-max-width;
+    margin-bottom: 4.7%;
+    font-size: @font-size-h2;
+    font-weight: 300;
+    line-height:@line-height;
+    text-align: center;
+    color: @header-font-color;
+    
+    .center-block();
+    
+    @media(min-width: 700px) {
+      position: absolute;
+      top: 29%;
+      left: 25%;
+      transform: translateX(-55%);
+      font-size: @font-size-h2--big;
+    }
+  }
+  
+  &__img {
+    display: block;
+    width: 70%;
+    
+    @media(min-width: 700px) {
+      margin-right: 4%;
+      float: right;
     }
   }
 }

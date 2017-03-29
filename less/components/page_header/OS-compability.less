@@ -15,12 +15,17 @@
   &__logo-item {
     display: block;
     width: 46px;
-    margin-bottom: 7%;
+    margin-bottom: 23px;
     
     .hidden-text();
+    
+    @media(min-width: 700px) {
+      margin-bottom: 44px;
+    }
   }
   
   &__text-list {
+    max-width: 300px;
     font-weight: 300;
     line-height: @line-height--big;
     text-align: center;
@@ -28,5 +33,9 @@
     color: @header-font-color;
     
     .center-block();
+    
+    @media(min-width: 700px) {
+      font-size: @font-size-h3;
+    }
   }
 }

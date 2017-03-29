@@ -1,8 +1,7 @@
 // out: null
 
 .product-presentation {
-  padding-top: 10%;
-
+  
   &__slogan {
     max-width: @mobile__block-max-width;
     margin-bottom: 4.7%;
@@ -13,10 +12,21 @@
     color: @header-font-color;
     
     .center-block();
+    
+    @media(min-width: 700px) {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      font-size: @font-size-h2--big;
+    }
   }
   
   &__img {
     display: block;
-    width: 80%;
+    width: 70%;
+    
+    @media(min-width: 700px) {
+      margin: 0 25%;
+    }
   }
 }

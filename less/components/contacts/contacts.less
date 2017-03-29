@@ -12,6 +12,11 @@
     font-size: @font-size-h2;
     font-weight: 300;
     text-align: center;
+    line-height: 1.375em;
+    
+    @media(min-width: 700px) {
+      font-size: @font-size-h2--big;
+    }
   }
   
   &__header-group {
@@ -22,18 +27,18 @@
   }
   
   &__items {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; */
     position: relative;
-    padding: 0 7% 12%;
+    padding: 0 14% 2%;
     list-style: none;
     
     &::before {
       content: "";
       position: absolute;
-      top: 99%;
+      top: 99.99%;
       right: 0;
       width: 50%;
       padding: 5% 0;
@@ -44,7 +49,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 99%;
+      top: 99.99%;
       left: 0;
       width: 50%;
       padding: 5% 0;
@@ -56,6 +61,28 @@
   &__item {
     max-width: @mobile__block-max-width;
     margin-bottom: 6.5%;
+    
+    .center-block();
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    @media(min-width: 700px) {
+      
+      &:nth-child(odd) {
+        float:left;
+      }
+      
+      &:nth-child(even) {
+        float:right;
+      }
+      
+      &:last-child {
+        clear: both;
+        float: none;
+      }
+    }
   }
   
   &__item-header {
@@ -88,23 +115,26 @@
   
   &__geolocation {
     position: relative;
-    width: 100%;
-    height: 200px;
-    background: url(@contacts-geolocation-map--sm) 50% 100% no-repeat;
-    background-size: 100% 645px;
+    height: 60vw;
+    background: url(https://maps.googleapis.com/maps/api/staticmap?center=Петербург,+Невский+проспект,+20&zoom=17&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true) 50% 50% no-repeat;
+    background-size: cover;
+    
+    @media(min-width: 700px) {
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Петербург,+Невский+проспект,+20&zoom=16&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true)
+    }
     
     //маркер на карте
     &::after {
       position: absolute;
+      top: 50%;
       left: 50%;
-      top: 95px;
+      transform: translate(-50%, -50%);
       width: 16px;
       height: 16px;
       content: "";
       border: 10px solid #fff;
       border-radius: 50%;
-      transform: translateX(-50%);
       background-color: @contacts-info-color;
-    }
+    } 
   }
 }

@@ -7,12 +7,16 @@
 }
 
 body {
-  font-size: @font-size-base;
-  font-family: @font-family-base;
+  
+  //для того, чтобы убрать лишний отступ внизу body
+  font-size: 0;
+ 
   
   & > * {
     //временно для центрирования
-    max-width: @mobile__max-width;
-    .center-block();
+    //max-width: @mobile__max-width;
+    //.center-block();
+    font-size: @font-size-base;
+    font-family: @font-family-base;
   }
 }

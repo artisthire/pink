@@ -2,12 +2,17 @@
 
 .reviews {
   background-color: @reviews-background-color;
+  clear: both;
   
   &__inner {
     
-    padding: 12% 7%;
+    padding: 11% 7%;
     
     .center-block();
+    
+    @media(min-width: 700px) {
+      padding-bottom: 3%;
+    }
   }
   
 }

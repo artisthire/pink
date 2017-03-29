@@ -20,6 +20,11 @@
     text-align: center;
     color: @reviews-author-font-color;
     line-height: @line-height;
+    
+    @media(min-width: 700px) {
+      order: 0;
+      font-size: 20px;
+    }
   }
   
   &__author-about {
@@ -30,6 +35,10 @@
     text-align: center;
     color: @reviews-text-font-color;
     line-height: @line-height;
+    
+    @media(min-width: 700px) {
+      display: block;
+    }
   }
   
   &__author-comment {
@@ -49,6 +58,11 @@
     &::after {
       display: inline;
       content: close-quote;
+    }
+    
+    @media(min-width: 700px) {
+      margin-bottom: 44px;
+      font-size: @font-size-h3;
     }
   }
 }

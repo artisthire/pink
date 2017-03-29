@@ -1,10 +1,19 @@
+//обратобка открытия/закрытия меню
 var toggle_btn = document.querySelector('.js-toggle-btn');
 var toggle_btn_SVG = document.querySelector('.js-toggle-btn__icon>use');
 
 var menu_wrap = document.querySelector('.js-nav-wrap');
 var menu = document.querySelector('.js-main-nav');
 
-toggle_btn.onclick = function(event) {
+//обработка пагинатора для отзывов price-table__paginator
+var reviews_paginator = document.getElementById("reviews__paginator");
+var price_paginator = document.getElementById("price-table__paginator");
+
+toggle_btn.addEventListener('click', toggleMenu);
+reviews_paginator.addEventListener("click", paginatorActive);
+price_paginator.addEventListener("click", paginatorActive);
+
+function toggleMenu(event) {
 
   if (this.classList.contains("menu-toggle-btn--active")) {
     toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
@@ -33,37 +42,30 @@ function closeMenu(event) {
   }
 }
 
-//обработка пагинатора для отзывов price-table__paginator
-var reviews_paginator = document.getElementById("reviews__paginator");
-var price_paginator = document.getElementById("price-table__paginator");
-
-reviews_paginator.addEventListener("click", paginatorActive);
-price_paginator.addEventListener("click", paginatorActive);
-
 function paginatorActive(event) {
   
   //если клик вне контейнера ничего не делаем
   if (!this.contains(event.target)) return;
   
-  var paginator_item = this.children;
+  var paginator_items = this.children;
 
   //делаем массив из коллекции
-  paginator_item = Array.prototype.slice.call(paginator_item);
+  paginator_items = Array.prototype.slice.call(paginator_items);
 
   var target = event.target;
 
   while (this != target) {
-    if (paginator_item.indexOf(target) != -1) {
+    if (paginator_items.indexOf(target) != -1) {
 
       //если клик на уже активном элементе либо уже отработан в предыдущем цикле
       if (target.classList.contains("point-paginator__item--active")) return;
 
-      for (var i = 0; i < paginator_item.length; i++) {
-        paginator_item[i].classList.remove("point-paginator__item--active");
+      for (var i = 0; i < paginator_items.length; i++) {
+        paginator_items[i].classList.remove("point-paginator__item--active");
       }
 
       target.classList.add("point-paginator__item--active");
-      elementSlide(this, paginator_item.indexOf(target), paginator_item.length);
+      elementSlide(this, paginator_items.indexOf(target));
     } else {
       //если клик внутри элемента на другом теге подымаемся вверх, пока не дойдем до нужного элемента
       target = target.parentNode;
@@ -72,14 +74,17 @@ function paginatorActive(event) {
 
 }
 
-var slider_reviews = document.getElementById("slider-reviews");
-var price_table = document.getElementById("price-table");
+
 
 //функция изменения позиции элемента в соотвествии с переключением пагинатора
 //принимает элемент точечного пагинатора, на котором произошел клик
 //номер этого элемента (номер точки в точечном пагинаторе)
 //обще количество точек пагинатора
-function elementSlide (element, position, length) {
+function elementSlide (element, position) {
+  
+  var slider_reviews = document.getElementById("slider-reviews");
+  var price_table = document.getElementById("price-table");
+  
   //проверяем к какому из блоков относится пагинатор (по общему родителю)
   if(slider_reviews.parentNode.contains(element)) {
     
@@ -93,16 +98,26 @@ function elementSlide (element, position, length) {
     
     return;
   }
+  
   if(price_table.parentNode.contains(element)) {
     
-    var procent_translation = Math.ceil(100/(length - 1)) * position;
-    var left_translation = procent_translation;
+    // сбрасываем все классы по смещению таблицы
+    price_table.className = 'price__table';
     
-    if (position == 0) left_translation = left_translation + 10;
-    if (position == length-1) left_translation = left_translation - 10;
-    
-    price_table.style.left = left_translation + "%";
-    price_table.style.transform = "translateX(-" + procent_translation + "%)";
+    //устанавливаем класс смещения в зависимости от номера активного пагинатора
+    switch (position) {
+      case 0: 
+        price_table.classList.add("price__table--left");
+        break;
+      case 1:
+        price_table.classList.add("price__table--center");
+        break;
+      case 2:
+        price_table.classList.add("price__table--right");
+        break;
+      default:
+        price_table.classList.add("price__table--center");
+    }
     
     return;
   }

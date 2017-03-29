@@ -1,9 +1,11 @@
 // out: null
 .promo {
+  
   &__slogan {
     display: block;
     padding: 12% 7% 7.5%;
     background-color: @promo-slogan-background-color;
+    
   }
   
   &__slogan-header {
@@ -14,11 +16,20 @@
     line-height: @line-height;
     text-align: center;
     color: @dark-gray;
-    
+   
     .center-block();
+    
+    @media(min-width: 700px) {
+      font-size: @font-size-h2--big;
+      margin-bottom: 0;
+    }
     
     &:last-child {
       margin-bottom: 0;
+      
+      @media(min-width: 700px) {
+        max-width: 580px;
+      }
     }
   }
   
@@ -27,7 +38,13 @@
     display: flex;
     flex-direction: column-reverse;
     padding: 80px 7% 0;
+    overflow: hidden;
     background-color: @light-gray;
+    
+    @media(min-width: 700px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
     
     &::before {
       display: block;
@@ -44,6 +61,10 @@
   //для рисунков
   &__advantage-image-items {
     display: block;
+    
+    @media(min-width: 700px) {
+      width: 45%;
+    }
   }
   
   &__advantage-image-item {
@@ -56,6 +77,13 @@
     &:not(:last-child) {
       display: none;
     }
+    
+    @media(min-width: 700px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: 0;
+    }
   }
   
   &__advantage-image-container {
@@ -64,21 +92,34 @@
     height: @advantage-image-container-height;
     
     .center-block();
+    
+    @media(min-width: 700px) {
+      width: auto;
+      height: 100%;
+    }
   }
   
   &__advantage-image {
-    position: absolute;
     width: @advantage-image-width;
     height: @advantage-image-height;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    
+    .absolute-center-block();
+    
+    @media(min-width: 700px) {
+      width: auto;
+      height: 88%;
+    }
   }
   
   //для текста
   &__advantage-text-items {
     display: block;
     list-style: none;
+    
+    @media(min-width: 700px) {
+      width: 45%;
+    }
   }
   
   &__advantage-text-item {
@@ -88,7 +129,15 @@
     
     &:last-child {
       margin-bottom: 0;
+      
+      @media(min-width: 700px) {
+        margin-bottom: 8%;
+      }
     }
+    
+    @media(min-width: 700px) {
+        text-align: left;
+      }
   }
   
   &__advantage-header {
@@ -105,4 +154,67 @@
     color: @dark-gray;
     line-height: @line-height--big;
   }
+  
+  &__effects {
+    display: none;
+    padding: 11% 7% 0;
+    background-color: @promo-slogan-background-color;
+    overflow: hidden;
+    
+    @media(min-width: 700px) {
+        display: block;
+    }
+  }
+  
+  &__effects-image {
+    float: left;
+    position: relative;
+    margin-right: 47px;
+    
+    &::after {
+      content: "24";
+      bottom: 28px;
+      border: 10px solid @base-color;
+      border-radius: 50%; 
+      color: @base-color;
+      font-size: 104px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 195px;
+      
+      .square(195px);
+      .absolute-center-block();
+    }
+  }
+  
+  &__effects-image-item {
+    width: 262px;
+    height: 302px;
+    fill: #eee;
+  }
+  
+  &__effects-header {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color:  #000;
+    font-size: @font-size-h3--big;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  &__effects-text {
+    margin-bottom: 20px;
+    color:  @dark-gray;
+    font-size: @font-size-h3;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  &__effects-link {
+    color:  @base-color;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: underline;
+  }
+  
 }

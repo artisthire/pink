@@ -1,0 +1,42 @@
+// out: null
+
+.footer-logotype {
+  display: inline-block;
+  .hidden-text();
+  
+  &__link {
+    display: inline-block;
+    vertical-align: bottom;
+    text-decoration: none;
+    cursor: pointer;
+    .text-overflow();
+    
+    &:hover {
+      & > * {
+        fill: @dark-gray;
+      }
+    }
+    
+    &:active {
+      & > * {
+        fill: @gray-color--fade;
+      }
+    }
+  }
+  
+  &__icon {
+    display: inline-block;
+    margin-right: 12px;
+    //заливка SVG-рисунка
+    fill: @base-color;
+    
+    .size(59px; 40px);
+  }
+  
+  &__text {
+    display: inline-block;
+    fill: @dark-gray;
+    
+    .size(74px; @logotype-height);
+  }
+}
