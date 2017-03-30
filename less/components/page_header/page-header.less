@@ -1,22 +1,34 @@
 // out: null
 .page-header {
   
-  @media(min-width: 700px) {
-      position: relative;
-    }
-  
   &__inner {
-    background: url(@header-background-image) 50% 0 no-repeat;
-    background-size:auto 100%;
+    margin-bottom: 275px;
+    background: url(../img/background-1@1x.jpg) 50% 0 no-repeat;
+    background-size:auto 100%; 
+    
+    @media(min-resolution: 2dppx) {
+      background-image: url(../img/background-1@2x.jpg);
+    }
+    
+    @media(min-resolution: 3dppx) {
+      background-image: url(../img/background-1@3x.jpg);
+    }
     
     @media(min-width: 700px) {
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
+      margin-bottom: 0;
     }
     
+    @media(min-width: 1200px) {
+      background-image: url(../img/background-2@1x.jpg);
+    }
+    
+    @media(min-width: 1200px) and (min-resolution: 2dppx) {
+      background-image: url(../img/background-2@2x.jpg);
+    }
+    
+    @media(min-width: 1200px) and (min-resolution: 3dppx) {
+      background-image: url(../img/background-2@3x.jpg);
+    } 
   }
   
   &__nav-wrap {
@@ -36,33 +48,61 @@
     }
   }
   
-   &__slogan {
-    max-width: @mobile__block-max-width;
+  &__wrap {
+    position: relative;
+  }
+  
+  &__slogan-wrap {
+    padding: 0 22px;
     margin-bottom: 4.7%;
+    
+    @media(min-width: 700px) {
+      position: relative;
+      width: 45%;
+      padding-top: 30px; 
+      margin-bottom: 0;
+      z-index: 10;
+    }
+  }
+  
+  &__slogan {
+    max-width: @mobile__block-max-width;
     font-size: @font-size-h2;
     font-weight: 300;
     line-height:@line-height;
     text-align: center;
-    color: @header-font-color;
+    color: @header-font-color;  
     
     .center-block();
     
     @media(min-width: 700px) {
-      position: absolute;
-      top: 29%;
-      left: 25%;
-      transform: translateX(-55%);
-      font-size: @font-size-h2--big;
-    }
+      font-size: 40px;
+    } 
   }
   
   &__img {
     display: block;
-    width: 70%;
+    height: 290px;
+    
     
     @media(min-width: 700px) {
-      margin-right: 4%;
-      float: right;
+      height: 100%;  
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    
+    & > img {
+      height: 100%;
+      //выравнивание картинки
+      position: relative;
+      left: 50%;
+      transform: translateX(-60%);
+      
+      @media(min-width: 700px) {
+        position: static;
+        transform: none;
+      }
     }
   }
 }
