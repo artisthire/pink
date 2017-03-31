@@ -3,13 +3,22 @@
 .copyright {
   display: inline-block;
  
-  &__link {
+  &__text {
     vertical-align: middle;
     font-size: @font-size-h3;
     font-weight: 400;
     text-align: left;
     text-decoration: none;
     color: @dark-gray;
+    
+    
+    
+  }
+  
+  &__icon-for {
+    display: inline-block;
+    vertical-align: middle;
+    .size(27px, 30px);
     
     fill: @base-color;
     
@@ -20,18 +29,22 @@
     &:active {
       fill: @gray-color--fade;
     }
-    
-  }
-  
-  &__icon-for {
-    display: inline-block;
-    vertical-align: middle;
-    .size(27px, 30px);
   }
   
   &__icon-by {
     display: inline-block;
     vertical-align: middle;
+    
     .size(27px, 33px);
+    
+    fill: @base-color;
+    
+    &:hover {
+      fill: @dark-gray;
+    }
+    
+    &:active {
+      fill: @gray-color--fade;
+    }
   }
 }
