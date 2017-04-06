@@ -1,17 +1,25 @@
 // out: null
 
 .reviews {
+  padding: 7% 6%;
   background-color: @reviews-background-color;
-  clear: both;
   
-  &__inner {
+  @media(min-width: 700px) and (max-width: 1200px) {
+    padding-bottom: 3%;
+  } 
+  
+  @media(min-width: 1200px) {
+    padding-bottom: 6%;
+  }
+  
+  &__quote {
+    display: none;
+    margin-bottom: 57px;
     
-    padding: 11% 7%;
+    .size(79px, 64px);
     
-    .center-block();
-    
-    @media(min-width: 700px) {
-      padding-bottom: 3%;
+    @media(min-width: 1200px) {
+      .center-block();
     }
   }
   

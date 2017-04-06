@@ -1,10 +1,14 @@
 // out: null
 .contacts {
-  
-  &__inner {
     padding-top: 12%;
     line-height: 2em;
     background-color: @contacts-background-color;
+  
+  &__header-group {
+    padding: 0 6%;
+    margin-bottom: 6%;
+    
+    .center-block();
   }
   
   &__header {
@@ -14,26 +18,28 @@
     text-align: center;
     line-height: 1.375em;
     
-    @media(min-width: 700px) {
+    @media(min-width: 700px) and (max-width: 1200px) {
       font-size: @font-size-h2--big;
+    }
+    
+    @media(min-width: 1200px) {
+      font-size: 50px;
     }
   }
   
-  &__header-group {
-    padding: 0 7%;
-    margin-bottom: 8%;
-    
-    .center-block();
-  }
-  
   &__items {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; */
     position: relative;
-    padding: 0 14% 2%;
+    padding: 0 6% 6%;
     list-style: none;
+    
+    @media(min-width: 700px) {
+      padding-bottom: 2%;
+    }
+    
+    @media (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+    }
     
     &::before {
       content: "";
@@ -59,6 +65,7 @@
   }
   
   &__item {
+    display: block;
     max-width: @mobile__block-max-width;
     margin-bottom: 6.5%;
     
@@ -68,21 +75,30 @@
       margin-bottom: 0;
     }
     
-    @media(min-width: 700px) {
-      
-      &:nth-child(odd) {
+    @media(min-width: 700px) and (max-width: 1200px) {
+      &:first-child {
         float:left;
       }
       
-      &:nth-child(even) {
+      &:nth-child(2) {
         float:right;
       }
       
       &:last-child {
         clear: both;
-        float: none;
       }
     }
+    
+    @media(min-width: 1200px) {
+      float: none;
+      margin: 0;
+      
+      &:nth-child(2) {
+        order: 1;
+      }
+      
+    }
+      
   }
   
   &__item-header {
@@ -90,6 +106,10 @@
     font-weight: 700;
     text-align: center;
     color: @contacts-header-color;
+    
+    @media(min-width: 1200px) {
+      margin-bottom: 30px;
+    }
   }
   
   &__item-info {
@@ -119,8 +139,12 @@
     background: url(https://maps.googleapis.com/maps/api/staticmap?center=Петербург,+Невский+проспект,+20&zoom=17&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true) 50% 50% no-repeat;
     background-size: cover;
     
-    @media(min-width: 700px) {
+    @media(min-width: 700px) and (max-width: 1200px) {
     background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Петербург,+Невский+проспект,+20&zoom=16&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true)
+    }
+    
+    @media(min-width: 1200px) {
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Петербург,+Невский+проспект,+20&zoom=15&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true)
     }
     
     //маркер на карте

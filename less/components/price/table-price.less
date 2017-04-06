@@ -1,0 +1,213 @@
+// out: null
+
+.table-price {
+  
+  display: table;
+  position: relative;
+  border-collapse: collapse;
+  
+  //сдвиг таблицы;
+  &--center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  &--left {
+    left: 10%;
+    transform: none;
+  }
+  
+  &--right {
+    left: 90%;
+    transform: translateX(-100%);
+  }
+  
+  @media(min-width: 700px) {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  
+  &__header {
+    
+    min-width: 114px;
+    position: relative;
+    padding: 22px 80px;
+    border: 2px solid #e5e5e5;
+    border-top-color: transparent;
+    border-bottom-color: @price-header-background-color;
+    background-color: @price-header-background-color;
+    
+    .text-overflow();
+    
+    &:first-of-type {
+      background-color: transparent;
+      border: none;
+      display: none;
+      @media(min-width: 700px) {
+        display: table-cell;
+      }
+    }
+    
+  
+    
+    &--hit::before {
+      position: absolute;
+      left: -39%;
+      top: 25%;
+      transform: translateY(-50%) rotate(-45deg);
+      content: attr(data-hit-text);
+      background-color: #d22856;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 30px;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      .size(100%, 30px);
+    }
+      
+    @media(min-width: 700px) and (max-width: 1200px) {
+      padding: 19px 20px 13px;
+    }
+      
+    @media(min-width: 1200px) {
+      padding: 20px 60px;
+    }
+  }
+  
+  &__product-level {
+    font-size: @price-level-font-size;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: @price-header-font-color;
+    
+    @media(min-width: 700px) and (max-width: 1200px) {
+      font-size: 16px;
+    }
+    
+    @media(min-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+  
+  &__product-money {
+    font-size: @price-money-font-size;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: @price-header-font-color;
+    
+    @media(min-width: 700px) and (max-width: 1200px) {
+      font-size: 18px;
+    }
+    
+    @media(min-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+  
+  &__product-name {
+    box-sizing: border-box;
+    height: 61px;
+    padding: 0 22px;
+    border: 2px solid #e5e5e5;
+    background-color: @price-body-background-color;
+    font-size: @price-body-font-size;
+    font-weight: 400;
+    text-align: left;
+    line-height: @price-table-line-height;
+    text-transform: uppercase;
+    color: @price-body-font-color;
+    
+    .text-overflow();
+    
+    //первая колонка скрыта в мобильной версии
+    &:first-of-type {
+      display: none;
+      
+      @media(min-width: 700px) {
+        display: table-cell;
+        text-transform: none;
+        text-align: center;
+      }
+      
+      @media(min-width: 1200px) {
+        font-size: 18px;
+      }
+    }
+    
+    @media(min-width: 700px) {
+      height: 45px;
+      padding: 0;
+      
+      &:not(:first-of-type) {
+        text-align: center;
+        .hidden-text();
+      }
+    }
+  }
+  
+  &__product-selected {
+    display: inline-block;
+    float: right;
+    
+    @media(min-width: 700px) {
+      float: none;
+    }
+  }
+  
+  &__point-paginator {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    counter-reset: paginator-items;
+    
+    .hidden-text();
+    
+    @media(min-width: 700px) {
+      display: none;
+    }
+  }
+  
+  &__point-paginator-item {
+    display: inline-block;
+    margin-right: @paginator-margin-right;
+    border-radius: 50%;
+    border: @paginator-border-width solid transparent;
+    background-clip: padding-box;
+    background-color: @paginator-background-color;
+    vertical-align: middle;
+    
+    .square(@paginator-size);
+    .hidden-text();
+    
+    &::before {
+      display: inline-block;
+      counter-increment: paginator-items;
+      content: counter(paginator-items);
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      background-color: @paginator-background-color--hvr;
+    }
+    
+    &:active {
+      background-color: #e9ebec;
+    }
+    
+    &--active {
+      border-color: @paginator-border-color;
+      background-color: @paginator-background-color--active;
+      &:hover {
+        background-color: @paginator-background-color--active;
+      } 
+    }
+  }
+  
+}

@@ -1,10 +1,14 @@
 // out: null
 
 .slider-reviews {
+  position: relative;
+  
   
   &__item {
     display: flex;
     flex-direction: column;
+    max-width: 680px;
+    margin: 0 auto;
     
     &--hidden {
       display: none;
@@ -24,12 +28,16 @@
     @media(min-width: 700px) {
       order: 0;
       font-size: 20px;
+      margin-bottom: 0;
+    }
+    
+    @media(min-width: 1200px) {
+      font-size: 24px;
     }
   }
   
   &__author-about {
     display: none;
-    margin-bottom: 15px;
     font-size: @font-size-base;
     font-weight: 400;
     text-align: center;
@@ -38,6 +46,10 @@
     
     @media(min-width: 700px) {
       display: block;
+    }
+    
+    @media(min-width: 1200px) {
+      font-size: 18px;
     }
   }
   
@@ -64,5 +76,89 @@
       margin-bottom: 44px;
       font-size: @font-size-h3;
     }
+    
+    @media(min-width: 1200px) {
+      quotes: none;
+    }
   }
+  
+  &__point-paginator {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    counter-reset: paginator-items;
+
+    .hidden-text();
+    
+    @media(min-width: 1200px) {
+      display: none;
+    }
+  
+  }
+  
+  &__point-paginator-item {
+    display: inline-block;
+    margin-right: @paginator-margin-right;
+    border-radius: 50%;
+    border: @paginator-border-width solid transparent;
+    background-clip: padding-box;
+    background-color: @paginator-background-color;
+    vertical-align: middle;
+    
+    .square(@paginator-size);
+    .hidden-text();
+    
+    &::before {
+      display: inline-block;
+      counter-increment: paginator-items;
+      content: counter(paginator-items);
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      background-color: @paginator-background-color--hvr;
+    }
+    
+    &:active {
+      background-color: #e9ebec;
+    }
+  
+    &--active {
+      border-color: @paginator-border-color;
+      background-color: @paginator-background-color--active;
+      
+      &:hover {
+        background-color: @paginator-background-color--active;
+      }
+    }
+  }
+  
+  &__row-paginator {
+    display: none;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    
+    @media(min-width: 1200px) {
+      display: block;
+    }
+  }
+  
+  &__row-paginator-item {
+    display: block;
+    height: 42px;
+    
+    &--left {
+      float: left;
+    }
+    
+    &--right {
+      float:right;
+    }
+  }
+  
+  
 }

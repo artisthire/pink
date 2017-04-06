@@ -10,6 +10,14 @@
   height: 0;
   //меню всплывает над всеми элементами страницы
   z-index: 100;
+  
+  @media(min-width: 1200px) {
+    position: static;
+    display: block;
+    height: auto;
+    z-index: auto;
+    text-align: right;
+  }
 
   &__items {
     list-style: none;
@@ -28,6 +36,22 @@
     background-color: @menu-color;
     box-shadow: 0px 1px 0px 0px @menu-shadow-color;
     
+    @media(min-width: 1200px) {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      border: none;
+      margin-bottom: 0;
+      margin-right: 6%;
+      background: none;
+      box-shadow: none;
+      line-height: normal;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
   }
   
   &__item-link {
@@ -39,16 +63,34 @@
     text-decoration: none;
     cursor: pointer;
     
-    @media(min-width:700px){
+    @media(min-width: 700px) and (max-width: 1200px) {
       font-size: @menu-font-size + 4;
+    }
+    
+    @media(min-width: 1200px) {
+      font-weight: 400;
+      height: auto;
+      line-height: 2em;
+      border-bottom: 2px solid transparent;
     }
     
     &:hover {
       color: @base-color;
+      
+      @media(min-width: 1200px) {
+        color: @header-font-color;
+        border-bottom: 2px solid @header-font-color;
+      }
     }
     
     &:active {
       color: @base-color--fade;
+      
+      @media(min-width: 1200px) {
+        color: @header-font-color;
+        border-bottom-color: transparent;
+        opacity: 0.6;
+      }
     }
   }
 }

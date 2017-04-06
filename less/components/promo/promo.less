@@ -3,7 +3,7 @@
   
   &__slogan {
     display: block;
-    padding: 12% 7% 7.5%;
+    padding: 6%;
     background-color: @promo-slogan-background-color;
     
   }
@@ -24,6 +24,10 @@
       margin-bottom: 0;
     }
     
+    @media(min-width: 1200px) {
+      font-size: 50px;
+    }
+    
     &:last-child {
       margin-bottom: 0;
       
@@ -37,13 +41,18 @@
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    padding: 80px 7% 0;
+    padding: 80px 6% 0;
     overflow: hidden;
     background-color: @light-gray;
     
-    @media(min-width: 700px) {
+    @media(min-width: 700px) and (max-width: 1200px) {
       flex-direction: row;
       justify-content: space-between;
+    }
+    
+    @media(min-width: 1200px) {
+      display: block;
+      padding-top: 0;
     }
     
     &::before {
@@ -62,8 +71,13 @@
   &__advantage-image-items {
     display: block;
     
-    @media(min-width: 700px) {
+    @media(min-width: 700px) and (max-width: 1200px) {
       width: 45%;
+    }
+    
+    @media(min-width: 1200px) {
+      width: 100%;
+      margin-bottom: 30px;
     }
   }
   
@@ -73,17 +87,38 @@
     margin-top: 12.5%;
     
     .center-block();
-    //в мобильной версии часть рисунков скрыта
-    &:not(:last-child) {
-      display: none;
+    
+    @media(max-width: 1200px) {
+      //в мобильной версии часть рисунков скрыта
+      &:not(:last-child) {
+        display: none;
+      }
     }
     
-    @media(min-width: 700px) {
+    @media(min-width: 700px) and (max-width: 1200px) {
       position: absolute;
       top: 0;
       bottom: 0;
       margin: 0;
     }
+    
+    @media(min-width: 1200px) {
+      display: inline-block;
+      width: 33%;
+      height: 300px;
+      margin-top: 0;
+      
+      &::after {
+        content: "";
+        top: 100%;
+        box-shadow: 0px -4px 8px -4px;
+        background-color: @light-gray;
+        
+        .absolute-center-block();
+        .size(260px, 10px);
+      }
+    }
+    
   }
   
   &__advantage-image-container {
@@ -117,8 +152,12 @@
     display: block;
     list-style: none;
     
-    @media(min-width: 700px) {
-      width: 45%;
+    @media(min-width: 700px) and (max-width: 1200px) {
+      width: 50%;
+    }
+    
+    @media(min-width: 1200px) {
+      width: 100%;
     }
   }
   
@@ -130,14 +169,22 @@
     &:last-child {
       margin-bottom: 0;
       
-      @media(min-width: 700px) {
+      @media(min-width: 700px) and (max-width: 1200px){
         margin-bottom: 8%;
       }
     }
     
-    @media(min-width: 700px) {
-        text-align: left;
-      }
+    @media(min-width: 700px) and (max-width: 1200px) {
+      text-align: left;
+    }
+    
+    @media(min-width: 1200px) {
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      vertical-align: top;
+      margin-bottom: 0;
+    }
   }
   
   &__advantage-header {
@@ -146,73 +193,24 @@
     font-size: @font-size-h3;
     font-weight: 700;
     line-height: @line-height--big;
+    
+    @media(min-width: 1200px) {
+      display: inline-block;
+      max-width: 65%;
+      font-size: 30px;
+      line-height: 1em;
+    }
   }
   
   &__advantage-text {
-    display: block;
+    display: inline-block;
+    max-width: 65%;
     font-weight: 400;
     color: @dark-gray;
     line-height: @line-height--big;
-  }
-  
-  &__effects {
-    display: none;
-    padding: 11% 7% 0;
-    background-color: @promo-slogan-background-color;
-    overflow: hidden;
     
-    @media(min-width: 700px) {
-        display: block;
+    @media(min-width: 1200px) {
+      font-size: 18px;
     }
-  }
-  
-  &__effects-image {
-    float: left;
-    position: relative;
-    margin-right: 47px;
-    
-    &::after {
-      content: "24";
-      bottom: 28px;
-      border: 10px solid @base-color;
-      border-radius: 50%; 
-      color: @base-color;
-      font-size: 104px;
-      font-weight: 700;
-      text-align: center;
-      line-height: 195px;
-      
-      .square(195px);
-      .absolute-center-block();
-    }
-  }
-  
-  &__effects-image-item {
-   .size(262px, 302px);
-  }
-  
-  &__effects-header {
-    margin-top: 45px;
-    margin-bottom: 20px;
-    color:  #000;
-    font-size: @font-size-h3--big;
-    font-weight: 700;
-    text-align: left;
-  }
-  
-  &__effects-text {
-    margin-bottom: 20px;
-    color:  @dark-gray;
-    font-size: @font-size-h3;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  &__effects-link {
-    color:  @base-color;
-    font-weight: 400;
-    text-align: left;
-    text-decoration: underline;
-  }
-  
+  } 
 }

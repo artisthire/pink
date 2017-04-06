@@ -1,0 +1,71 @@
+ // out: null
+
+ .effects {
+   
+   display: none;
+   padding: 6% 6% 0;
+   background-color: @promo-slogan-background-color;
+   overflow: hidden;
+   
+   @media(min-width: 700px) {
+     display: block;
+   }
+   
+   @media(min-width: 1200px) {
+     background-color: @light-gray;
+     padding: 6%;
+   }
+   
+   &__image {
+     float: left;
+     position: relative;
+     margin-right: 6.5%;
+     
+     &::after {
+       content: "24";
+       bottom: 28px;
+       border: 10px solid @base-color;
+       border-radius: 50%;
+       color: @base-color;
+       font-size: 104px;
+       font-weight: 700;
+       text-align: center;
+       line-height: 195px;
+       .square(195px);
+       .absolute-center-block();
+     }
+   }
+   
+   &__image-item {
+     .size(262px, 302px);
+   }
+   
+   &__header {
+     margin-top: 45px;
+     margin-bottom: 20px;
+     color: #000;
+     font-size: @font-size-h3--big;
+     font-weight: 700;
+     text-align: left;
+   }
+   
+   &__text {
+     margin-bottom: 20px;
+     color: @dark-gray;
+     font-size: @font-size-h3;
+     font-weight: 400;
+     text-align: left;
+   }
+   
+   &__link {
+     color: @base-color;
+     font-weight: 400;
+     text-align: left;
+     text-decoration: underline;
+     
+     @media(min-width: 1200px) {
+       font-size: @font-size-h3;
+       text-decoration: none;
+     }
+   }
+ }
