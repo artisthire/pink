@@ -9,6 +9,9 @@ var menu = document.querySelector('.js-main-nav');
 var reviews_paginator = document.getElementById("slider-reviews__point-paginator");
 var price_paginator = document.getElementById("table-price__point-paginator");
 
+//обработка "стрелочного" слайдера для отзывов
+var row_price_paginator = document.getElementById("slider-reviews__row-paginator");
+
 toggle_btn.addEventListener('click', toggleMenu);
 reviews_paginator.addEventListener("click", paginatorActive);
 price_paginator.addEventListener("click", paginatorActive);
@@ -123,3 +126,74 @@ function elementSlide(element, position) {
     return;
   }
 }
+
+
+row_price_paginator.onclick = function(event) {
+  
+  var target = event.target;
+  var row_price_paginator_items = row_price_paginator.children;
+  //делаем массив из коллекции
+  row_price_paginator_items = Array.prototype.slice.call(row_price_paginator_items);
+  
+  while (this != target) {
+    
+    if (row_price_paginator_items.indexOf(target) != -1) {
+      
+      var slider_review = document.getElementById("slider-reviews");
+      var slider_reviews_items = slider_review.querySelectorAll("." + slider_review.classList[0] + "__item");
+      //slider_reviews_items = Array.prototype.slice.call(slider_reviews_items);
+      
+      //ищем активный (отображаемый) элемент отзывов
+      var active_reviews_item = 0;
+      for(var i = 0; i < slider_reviews_items.length; i++) {
+        if (slider_reviews_items[i].classList.contains(slider_review.classList[0] + "__item--hidden")) continue;
+        //находим индекс первого и единственного не скрытого элемента и прерываем цикл
+        active_reviews_item = i;
+        break;
+      }
+      
+      //если клик на стрелке "назад" уменьшаем позицию активного отзыва
+      if (target == row_price_paginator.firstElementChild) active_reviews_item--;
+      //иначе - увеличиваем
+      if (target == row_price_paginator.lastElementChild) active_reviews_item++;
+      
+      //варианты активных элементов ограничены 0 и максимальным количеством отзывов
+      active_reviews_item = Math.max(0,active_reviews_item);
+      active_reviews_item = Math.min(slider_reviews_items.length-1, active_reviews_item);
+      
+      if(!slider_reviews_items[active_reviews_item].classList.contains(slider_review.classList[0] + "__item--hidden")) return;
+      
+      //сначала скрываем все элементы
+      for(var i = 0; i < slider_reviews_items.length; i++) {
+        slider_reviews_items[i].classList.add(slider_review.classList[0] + "__item--hidden");
+      }
+      
+      //далее показываем только следующий активный элемент
+ slider_reviews_items[active_reviews_item].classList.remove(slider_review.classList[0] + "__item--hidden");
+      
+      
+      
+      //также нужно переключить точечный пагинатор в соотвествии
+      //с выбранным отзывом с помощью стрелочного пагинатора
+      //это нужно для устройств у которых при смене ориентации 
+      //когда стерлочный пагинатор меняется на точечный
+      if (active_reviews_item >= 0 & active_reviews_item <= 2) {
+        
+        var paginator_items = reviews_paginator.children;
+        
+        for (var i = 0; i < paginator_items.length; i++) {
+          paginator_items[i].classList.remove(paginator_items[i].classList[0] + "--active");
+      }
+        paginator_items[active_reviews_item].classList.add(paginator_items[active_reviews_item].classList[0] + "--active");
+        
+      }
+      
+       return;
+    }
+    
+    else {
+      target = target.parentNode;
+    }
+  }
+  
+};

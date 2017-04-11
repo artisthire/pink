@@ -35,7 +35,8 @@
     padding: 22px 80px;
     border: 2px solid #e5e5e5;
     border-top-color: transparent;
-    border-bottom-color: @price-header-background-color;
+    box-shadow: 0 1px @price-header-background-color;
+    //border-bottom-color: @price-header-background-color;
     background-color: @price-header-background-color;
     
     .text-overflow();
@@ -43,12 +44,22 @@
     &:first-of-type {
       background-color: transparent;
       border: none;
+      box-shadow: none;
       display: none;
       @media(min-width: 700px) {
         display: table-cell;
       }
     }
     
+    &:nth-of-type(2) {
+      box-shadow: -1px 1px @price-header-background-color;
+      border-radius: 2px 0 0 2px;
+    }
+    
+    &:last-of-type {
+      box-shadow: 1px 1px @price-header-background-color;
+      border-radius: 0 2px 2px 0;
+    }
   
     
     &--hit::before {

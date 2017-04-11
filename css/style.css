@@ -522,7 +522,7 @@ body > * {
 }
 @media (min-width: 700px) and (max-width: 1200px) {
   .promo__advantage-text-items {
-    width: 50%;
+    width: 45%;
   }
 }
 @media (min-width: 1200px) {
@@ -573,14 +573,16 @@ body > * {
   }
 }
 .promo__advantage-text {
-  display: inline-block;
-  max-width: 65%;
+  display: block;
   font-weight: 400;
   color: #283645;
   line-height: 1.71em;
 }
 @media (min-width: 1200px) {
   .promo__advantage-text {
+    display: inline-block;
+    max-width: 65%;
+    text-align: center;
     font-size: 18px;
   }
 }
@@ -874,7 +876,7 @@ body > * {
   padding: 22px 80px;
   border: 2px solid #e5e5e5;
   border-top-color: transparent;
-  border-bottom-color: #283645;
+  box-shadow: 0 1px #283645;
   background-color: #283645;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -883,12 +885,21 @@ body > * {
 .table-price__header:first-of-type {
   background-color: transparent;
   border: none;
+  box-shadow: none;
   display: none;
 }
 @media (min-width: 700px) {
   .table-price__header:first-of-type {
     display: table-cell;
   }
+}
+.table-price__header:nth-of-type(2) {
+  box-shadow: -1px 1px #283645;
+  border-radius: 2px 0 0 2px;
+}
+.table-price__header:last-of-type {
+  box-shadow: 1px 1px #283645;
+  border-radius: 0 2px 2px 0;
 }
 .table-price__header--hit::before {
   position: absolute;
@@ -1286,8 +1297,6 @@ body > * {
 .copyright__icon-for {
   display: inline-block;
   vertical-align: middle;
-  width: 27px;
-  height: 30px;
   fill: #d22856;
 }
 .copyright__icon-for:hover {
@@ -1296,11 +1305,13 @@ body > * {
 .copyright__icon-for:active {
   fill: rgba(190, 194, 199, 0.6);
 }
+.copyright__icon-for > svg {
+  width: 27px;
+  height: 30px;
+}
 .copyright__icon-by {
   display: inline-block;
   vertical-align: middle;
-  width: 27px;
-  height: 33px;
   fill: #d22856;
 }
 .copyright__icon-by:hover {
@@ -1308,4 +1319,8 @@ body > * {
 }
 .copyright__icon-by:active {
   fill: rgba(190, 194, 199, 0.6);
+}
+.copyright__icon-by > svg {
+  width: 27px;
+  height: 33px;
 }

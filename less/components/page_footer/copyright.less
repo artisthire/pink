@@ -18,8 +18,6 @@
   &__icon-for {
     display: inline-block;
     vertical-align: middle;
-    .size(27px, 30px);
-    
     fill: @base-color;
     
     &:hover {
@@ -29,14 +27,16 @@
     &:active {
       fill: @gray-color--fade;
     }
+    
+    & > svg {
+      .size(27px, 30px);
+    }
+    
   }
   
   &__icon-by {
     display: inline-block;
     vertical-align: middle;
-    
-    .size(27px, 33px);
-    
     fill: @base-color;
     
     &:hover {
@@ -45,6 +45,10 @@
     
     &:active {
       fill: @gray-color--fade;
+    }
+    
+    & > svg {
+      .size(27px, 33px);
     }
   }
 }
