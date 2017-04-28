@@ -98,18 +98,17 @@ body > * {
 .page-header__img {
   display: block;
   height: 290px;
+  /* @media(min-width: 1200px) {
+      padding-right: 6%;
+    } */
 }
 @media (min-width: 700px) {
   .page-header__img {
     height: 100%;
+    width: 100%;
     position: absolute;
     right: 0;
     bottom: 0;
-  }
-}
-@media (min-width: 1200px) {
-  .page-header__img {
-    padding-right: 6%;
   }
 }
 .page-header__img > img {
@@ -122,6 +121,7 @@ body > * {
   .page-header__img > img {
     position: static;
     transform: none;
+    float: right;
   }
 }
 .header-logotype {
@@ -257,13 +257,20 @@ body > * {
   outline: none;
   background-color: transparent;
   cursor: pointer;
-  width: 50px;
-  height: 24px;
   font-size: 0;
   line-height: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 50px;
+  height: 24px;
+  fill: #ffffff;
+}
+.menu-toggle-btn:hover {
+  fill: #d22856;
+}
+.menu-toggle-btn:active {
+  fill: rgba(210, 40, 86, 0.6);
 }
 @media (min-width: 1200px) {
   .menu-toggle-btn {
@@ -271,13 +278,8 @@ body > * {
   }
 }
 .menu-toggle-btn__icon {
-  fill: #ffffff;
-}
-.menu-toggle-btn__icon:hover {
-  fill: #d22856;
-}
-.menu-toggle-btn__icon:active {
-  fill: rgba(210, 40, 86, 0.6);
+  width: inherit;
+  height: inherit;
 }
 .menu-toggle-btn--active {
   width: 24px;
@@ -315,7 +317,7 @@ body > * {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 11px 30px;
+  padding: 11px 25px;
   font-size: 18px;
   line-height: 1.375em;
   border-radius: 40px;
@@ -849,7 +851,8 @@ body > * {
 .table-price {
   display: table;
   position: relative;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 2px;
 }
 .table-price--center {
   left: 50%;
@@ -874,9 +877,9 @@ body > * {
   min-width: 114px;
   position: relative;
   padding: 22px 80px;
-  border: 2px solid #e5e5e5;
-  border-top-color: transparent;
-  box-shadow: 0 1px #283645;
+  /*    border: 2px solid #e5e5e5;
+    border-top-color: transparent; */
+  box-shadow: 0 2px #283645;
   background-color: #283645;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -894,11 +897,10 @@ body > * {
   }
 }
 .table-price__header:nth-of-type(2) {
-  box-shadow: -1px 1px #283645;
+  box-shadow: -1px 1px 0 1px #283645;
   border-radius: 2px 0 0 2px;
 }
 .table-price__header:last-of-type {
-  box-shadow: 1px 1px #283645;
   border-radius: 0 2px 2px 0;
 }
 .table-price__header--hit::before {
@@ -965,7 +967,7 @@ body > * {
   box-sizing: border-box;
   height: 61px;
   padding: 0 22px;
-  border: 2px solid #e5e5e5;
+  /* border: 2px solid #e5e5e5; */
   background-color: #ffffff;
   font-size: 14px;
   font-weight: 400;

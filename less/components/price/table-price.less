@@ -4,7 +4,8 @@
   
   display: table;
   position: relative;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 2px;
   
   //сдвиг таблицы;
   &--center {
@@ -33,9 +34,9 @@
     min-width: 114px;
     position: relative;
     padding: 22px 80px;
-    border: 2px solid #e5e5e5;
-    border-top-color: transparent;
-    box-shadow: 0 1px @price-header-background-color;
+ /*    border: 2px solid #e5e5e5;
+    border-top-color: transparent; */
+    box-shadow: 0 2px @price-header-background-color;
     //border-bottom-color: @price-header-background-color;
     background-color: @price-header-background-color;
     
@@ -52,12 +53,11 @@
     }
     
     &:nth-of-type(2) {
-      box-shadow: -1px 1px @price-header-background-color;
+      box-shadow: -1px 1px 0 1px @price-header-background-color;
       border-radius: 2px 0 0 2px;
     }
     
     &:last-of-type {
-      box-shadow: 1px 1px @price-header-background-color;
       border-radius: 0 2px 2px 0;
     }
   
@@ -123,7 +123,7 @@
     box-sizing: border-box;
     height: 61px;
     padding: 0 22px;
-    border: 2px solid #e5e5e5;
+    /* border: 2px solid #e5e5e5; */
     background-color: @price-body-background-color;
     font-size: @price-body-font-size;
     font-weight: 400;

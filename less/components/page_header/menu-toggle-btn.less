@@ -7,24 +7,29 @@
   background-color: transparent;
   cursor: pointer;
   
-  .size(50px; @logotype-height);
+  
   .hidden-text();
   .text-overflow();
+  .size(50px; @logotype-height);
+  
+   //заливка SVG
+  fill: @header-font-color;
+
+  &:hover {
+    fill: @base-color;
+  }
+  &:active {
+    fill: @base-color--fade;
+  }
+  
   
   @media(min-width: 1200px) {
     display: none;
   }
 
   &__icon {
-    //заливка SVG
-    fill: @header-font-color;
-
-    &:hover {
-      fill: @base-color;
-    }
-    &:active {
-      fill: @base-color--fade;
-    }
+    width: inherit;
+    height: inherit;
   }
   
   &--active {

@@ -1,3 +1,4 @@
+(function() {
 //обратобка открытия/закрытия меню
 var toggle_btn = document.querySelector('.js-toggle-btn');
 var toggle_btn_SVG = document.querySelector('.js-toggle-btn__icon>use');
@@ -19,13 +20,13 @@ price_paginator.addEventListener("click", paginatorActive);
 function toggleMenu(event) {
 
   if (this.classList.contains(this.classList[0] + "--active")) {
-    toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
+    if(toggle_btn_SVG) toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
     this.classList.remove(this.classList[0] + "--active");
     menu_wrap.classList.remove(menu_wrap.classList[0] + "--menu-open");
     menu.style.display = "";
     document.removeEventListener('click', closeMenu);
   } else {
-    toggle_btn_SVG.setAttribute("xlink:href", "#menu-cross");
+    if(toggle_btn_SVG) toggle_btn_SVG.setAttribute("xlink:href", "#menu-cross");
     this.classList.add(this.classList[0] + "--active");
     menu_wrap.classList.add(menu_wrap.classList[0] + "--menu-open");
     menu.style.display = "block";
@@ -37,7 +38,7 @@ function toggleMenu(event) {
 //обрабатываем закрытие открытого меню при клике в любом месте документа
 function closeMenu(event) {
   if (!toggle_btn.contains(event.target) & toggle_btn.classList.contains(toggle_btn.classList[0] + "--active")) {
-    toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
+    if(toggle_btn_SVG) toggle_btn_SVG.setAttribute("xlink:href", "#menu-burger");
     toggle_btn.classList.remove(toggle_btn.classList[0] + "--active");
     menu_wrap.classList.remove(menu_wrap.classList[0] + "--menu-open");
     menu.style.display = "";
@@ -46,9 +47,6 @@ function closeMenu(event) {
 }
 
 function paginatorActive(event) {
-
-  //если клик вне контейнера ничего не делаем
-  if (!this.contains(event.target)) return;
 
   var paginator_items = this.children;
 
@@ -63,13 +61,19 @@ function paginatorActive(event) {
       //если клик на уже активном элементе либо уже отработан в предыдущем цикле
       if (target.classList.contains(target.classList[0] + "--active")) return;
 
-      for (var i = 0; i < paginator_items.length; i++) {
+      paginator_items.filter(function(elem) {return elem.classList.contains(elem.classList[0] + "--active");}).forEach(function(elem) {
+        //if (elem.classList.contains(elem.classList[0] + "--active"))
+          elem.classList.remove(elem.classList[0] + "--active");
+      });
+      
+      /*for (var i = 0; i < paginator_items.length; i++) {
         if (paginator_items[i].classList.contains(paginator_items[i].classList[0] + "--active"))
           paginator_items[i].classList.remove(paginator_items[i].classList[0] + "--active");
-      }
+      }*/
 
       target.classList.add(target.classList[0] + "--active");
       elementSlide(this, paginator_items.indexOf(target));
+      return;
     } else {
       //если клик внутри элемента на другом теге подымаемся вверх, пока не дойдем до нужного элемента
       target = target.parentNode;
@@ -197,3 +201,31 @@ row_price_paginator.onclick = function(event) {
   }
   
 };
+
+/*
+function deepEqual(obj1, obj2) {
+	
+	if (typeof obj1 != typeof obj2) return false; 
+	if((obj1 === null || obj2 === null) && obj1 !== obj2) return false; 
+	if(obj1 === obj2 && obj1 === null) return true; 
+	if (typeof obj1 != "object") return obj1 === obj2; 
+	if(typeof obj1 == "object") {
+		var result = false;
+		if (Object.keys(obj1).length != Object.keys(obj2).length) result = false; 
+		for (var i=0; i< Object.keys(obj1).length; i++) {
+			if(Object.keys(obj1)[i] != Object.keys(obj2)[i]) result = false; 
+			result = deepEqual(obj1[Object.keys(obj1)[i]], obj2[Object.keys(obj2)[i]]);
+			if (!result) break;
+			//console.log(result);
+		}
+		return result;
+	} 
+} 
+
+function arrayToList (arr) {var array = arr.slice(); var list = {value: array.pop(), rest: null}; while(array.length != 0) { list = {value: array.pop(), rest: list}; } return list; }
+
+
+console.log(deepEqual(arrayToList([1,2,3]), arrayToList([1,20,3])));
+*/
+  
+})();

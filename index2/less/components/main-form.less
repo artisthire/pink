@@ -1,0 +1,98 @@
+// out: null
+.main-form {
+  
+  position: relative;
+  font-weight: @font-weight-normal;
+  font-size: @font-size-base;
+  color: @black-color;
+  
+  &__client-name {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    padding: @input-padding-v @input-padding-h;
+    margin-bottom: @input-margin-bottom;
+    border: @input-border-width solid @input-border-color;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    
+    &::placeholder {
+      font-weight: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+    &::-webkit-input-placeholder {
+      font-weight: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+  
+  &__date {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33%;
+    padding: @input-padding-v @input-padding-h;
+    margin-right: 4%;
+    margin-bottom: @input-margin-bottom;
+    border: @input-border-width solid @input-border-color;
+    font-size: @font-size-base;
+    color: @black-color;
+    &::placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+    &::-webkit-input-placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+  }
+  
+  &__time {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33%;
+    padding: @input-padding-v @input-padding-h;
+    //для того чтобы убрать лишний символ у элемента inline
+    margin-left: -0.3em;
+    margin-bottom: @input-margin-bottom;
+    border: @input-border-width solid @input-border-color;
+    font-size: @font-size-base;
+    color: @black-color;
+    
+    &::placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+    &::-webkit-input-placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+  }
+  
+  &__select-master {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    padding: @input-padding-v @input-padding-h;
+    border: @input-border-width solid @input-border-color;
+    font-size: @font-size-base;
+    color: @black-color;
+    
+    &::placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+    &::-webkit-input-placeholder {
+      color: @black-color;
+      font-size: @font-size-base;
+    }
+  }
+  
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

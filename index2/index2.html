@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форма для отправки</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <form action="handler.php" class="send-form">
+    <h2 class="send-form__header">Запись на стрижку</h2>
+    
+    <section class="send-form__main-info">
+      <div class="main-form">
+        <input type="text" class="main-form__client-name" placeholder="Представьтесь пожалуйста" name="name">
+        
+        <div class="main-form__date">
+          <input id="date" type="date" class="main-form__date-input" name="date">
+          <label for="date" class="main-form__date-label">
+            <span class="main-form__date-placeholder">Выберите дату</span> 
+          </label>
+        </div>
+
+        <input type="time" class="main-form__time" placeholder="Выберите время" name="time">
+        <select name="master" class="main-form__select-master">
+          <option value="item0">Выберите мастера</option>
+          <option value="borya">Борис "Бритва"</option>
+          <option value="kolya">Николай "Колун"</option>
+          <option value="masha">Мария "Мрия"</option>
+        </select>
+        
+        <div class="main-form__img avatar-foto avatar-foto--active" data-placeholder="Перетащите&#10;ваше&nbsp;фото">
+        </div>
+      </div>
+    </section>
+
+    <section class="send-form__select-border">
+      <div class="slider">
+        <h2 class="slider__header">Выберите модель бороды</h2>
+        
+        <div class="slider__slides">
+          <input type="radio" name="tobble" id="btn-1" value="admiral">
+          <input type="radio" name="toggle" id="btn-2" value="lesorub">
+          <input type="radio" name="toggle" id="btn-3" value="polyarnik">
+          <input type="radio" name="toggle" id="btn-4" value="boyarin">
+          <input type="radio" name="toggle" id="btn-5" value="mudrec">
+        
+          <label for="bnt-1" class="slider__item">
+            <img src="img/bullbasaur.svg" alt="Адмирал">
+            <span>адмирал</span>
+          </label>
+          <label for="bnt-2" class="slider__item">
+            <img src="img/charmander.svg" alt="Лесоруб">
+            <span>лесоруб</span>
+          </label>
+          <label for="bnt-3" class="slider__item">
+            <img src="img/jigglypuff.svg" alt="Полярник">
+            <span>полярник</span>
+          </label>
+          <label for="bnt-4" class="slider__item">
+            <img src="img/pikachu.svg" alt="Боярин">
+            <span>боярин</span>
+          </label>
+          <label for="bnt-5" class="slider__item">
+            <img src="img/psyduck.svg" alt="Мудрец">
+            <span>мудрец</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="send-form__parameters-border">
+        <label>Длина: <input type="number" min="1" max="50" name="border-lenght"></label>
+        <label>Ширина: <input type="number" min="1" max="20" name="border-width"></label>
+      </div>
+      
+      <div class="send-form__client-foto">
+       <span>Загрузите фотографии, которые могут помочь мастеру какую стрижку и бороду вы хотите заказать</span>
+       <input type="file" name="client_foto" value="Загрузить фото" multiple>
+        <div class="send-form__client-foro-preview"></div>
+      </div>
+
+    </section>
+
+    <input class="send-fomr__btn-submit" type="submit" value="Отправить заявку">
+
+  </form>
+  
+  
+</body>
+
+</html>

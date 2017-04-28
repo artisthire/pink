@@ -1,0 +1,43 @@
+// out: null
+
+//размер кнопки
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+
+//центрирование блока
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.absolute-center-block() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// удаление влияния нижней части букв на высоту блоков, в которых текс заменена на иконки
+.hidden-text() {
+  font-size: 0;
+  line-height: 0;
+}
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
+
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
